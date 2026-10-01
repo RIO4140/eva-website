@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVA — Sovereign DeFi Token on Base</title>
+<meta name="description" content="EVA is a sovereign token on Base: bonding-curve pricing, self-funding reserve, and an on-chain immune system. No admin keys.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Immersive background layers -->
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb-1" data-depth="0.06"></div>
+  <div class="orb orb-2" data-depth="0.12"></div>
+  <div class="orb orb-3" data-depth="0.09"></div>
+  <div class="orb orb-4" data-depth="0.15"></div>
+</div>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header id="nav">
+  <a href="#hero" class="brand">
+    <img src="logo.png" alt="EVA logo" class="brand-logo">
+    <span class="brand-name">EVA</span>
+  </a>
+  <nav class="nav-links" id="nav-links">
+    <a href="#about" data-i18n="nav.about"></a>
+    <a href="#benefits" data-i18n="nav.benefits"></a>
+    <a href="#problems" data-i18n="nav.problems"></a>
+    <a href="#immune" data-i18n="nav.immune"></a>
+    <a href="#tokenomics" data-i18n="nav.tokenomics"></a>
+    <a href="#trade" data-i18n="nav.trade"></a>
+    <a href="#contracts" data-i18n="nav.contracts"></a>
+  </nav>
+  <div class="nav-actions">
+    <button id="lang-toggle" class="pill-btn" type="button"></button>
+    <button id="wallet-btn" class="cta small" type="button"></button>
+    <button id="menu-toggle" class="menu-btn" type="button" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section id="hero" class="reveal">
+  <div class="hero-inner">
+    <div class="hero-badge glass" data-i18n="hero.badge"></div>
+    <img src="logo.png" alt="EVA logo" class="hero-logo">
+    <h1 class="hero-title">EVA</h1>
+    <p class="hero-tagline" data-i18n="hero.tagline"></p>
+    <p class="hero-sub" data-i18n="hero.sub"></p>
+    <div class="hero-ctas">
+      <a href="#trade" class="cta magnetic" data-i18n="hero.ctaBuy"></a>
+      <a href="#about" class="ghost-btn magnetic" data-i18n="hero.ctaLearn"></a>
+    </div>
+    <div class="price-chip glass">
+      <span class="chip-dot"></span>
+      <span data-i18n="hero.price"></span>:
+      <strong id="hero-price">—</strong>
+      <span data-i18n="hero.perEva"></span>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section id="stats">
+  <div class="stats-grid">
+    <div class="stat-card glass reveal"><div class="stat-label" data-i18n="stats.price"></div><div class="stat-value" id="stat-price">—</div></div>
+    <div class="stat-card glass reveal"><div class="stat-label" data-i18n="stats.mcap"></div><div class="stat-value" id="stat-mcap">—</div></div>
+    <div class="stat-card glass reveal"><div class="stat-label" data-i18n="stats.supply"></div><div class="stat-value" id="stat-supply">—</div></div>
+    <div class="stat-card glass reveal"><div class="stat-label" data-i18n="stats.reserve"></div><div class="stat-value" id="stat-reserve">—</div></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="reveal">
+  <div class="container">
+    <h2 class="section-title" data-i18n="about.title"></h2>
+    <p class="lead" data-i18n="about.p1"></p>
+    <p class="lead" data-i18n="about.p2"></p>
+  </div>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section id="benefits">
+  <div class="container">
+    <h2 class="section-title reveal" data-i18n="benefits.title"></h2>
+    <div class="cards-grid" id="benefits-grid"></div>
+  </div>
+</section>
+
+<!-- ============ PROBLEMS ============ -->
+<section id="problems">
+  <div class="container">
+    <h2 class="section-title reveal" data-i18n="problems.title"></h2>
+    <p class="section-sub reveal" data-i18n="problems.sub"></p>
+    <div class="problems-list" id="problems-list"></div>
+  </div>
+</section>
+
+<!-- ============ IMMUNE ============ -->
+<section id="immune">
+  <div class="container">
+    <h2 class="section-title reveal" data-i18n="immune.title"></h2>
+    <p class="section-sub reveal" data-i18n="immune.sub"></p>
+    <div class="immune-grid">
+      <div class="glass tilt-card reveal">
+        <div class="engine-icon registry-icon" aria-hidden="true"></div>
+        <h3 data-i18n="immune.registry.t"></h3>
+        <p data-i18n="immune.registry.d"></p>
+      </div>
+      <div class="glass tilt-card reveal">
+        <div class="engine-icon defense-icon" aria-hidden="true"></div>
+        <h3 data-i18n="immune.defense.t"></h3>
+        <p data-i18n="immune.defense.d"></p>
+      </div>
+    </div>
+    <p class="advisory-note reveal" data-i18n="immune.note"></p>
+  </div>
+</section>
+
+<!-- ============ TOKENOMICS ============ -->
+<section id="tokenomics">
+  <div class="container">
+    <h2 class="section-title reveal" data-i18n="tokenomics.title"></h2>
+    <p class="supply-line reveal" data-i18n="tokenomics.supply"></p>
+    <div class="glass table-card reveal">
+      <table id="tokenomics-table"><tbody></tbody></table>
+    </div>
+    <p class="taxes-line reveal" data-i18n="tokenomics.taxes"></p>
+  </div>
+</section>
+
+<!-- ============ TRADE (dApp) ============ -->
+<section id="trade">
+  <div class="container">
+    <h2 class="section-title reveal" data-i18n="trade.title"></h2>
+    <p class="section-sub reveal" data-i18n="trade.sub"></p>
+    <div id="trade-notlive" class="glass notice hidden"><span data-i18n="trade.notLive"></span></div>
+    <div class="trade-card glass reveal" id="trade-card">
+      <div class="tabs" role="tablist">
+        <button id="tab-buy" class="tab active" type="button" role="tab" data-i18n="trade.buyTab"></button>
+        <button id="tab-sell" class="tab" type="button" role="tab" data-i18n="trade.sellTab"></button>
+      </div>
+
+      <div id="panel-buy" class="panel">
+        <div class="field">
+          <div class="field-head">
+            <span data-i18n="trade.youPay"></span>
+            <span class="bal"><span data-i18n="trade.balance"></span>: <b id="eth-bal">—</b> <button id="eth-max" class="max-btn" type="button" data-i18n="trade.max"></button></span>
+          </div>
+          <div class="input-row">
+            <input id="buy-in" type="number" min="0" step="any" placeholder="0.0" inputmode="decimal" autocomplete="off">
+            <span class="unit">ETH</span>
+          </div>
+        </div>
+        <div class="swap-arrow" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg>
+        </div>
+        <div class="field">
+          <div class="field-head"><span data-i18n="trade.youReceive"></span></div>
+          <div class="output-row"><span id="buy-out">—</span><span class="unit">EVA</span></div>
+        </div>
+        <div class="trade-meta"><span data-i18n="trade.price"></span>: <b id="buy-price">—</b><span class="sep"></span><span data-i18n="trade.slippage"></span>: <b>2%</b></div>
+        <button id="buy-btn" class="cta wide magnetic" type="button" data-i18n="trade.buyBtn"></button>
+      </div>
+
+      <div id="panel-sell" class="panel hidden">
+        <div class="field">
+          <div class="field-head">
+            <span data-i18n="trade.evaPay"></span>
+            <span class="bal"><span data-i18n="trade.balance"></span>: <b id="eva-bal">—</b> <button id="eva-max" class="max-btn" type="button" data-i18n="trade.max"></button></span>
+          </div>
+          <div class="input-row">
+            <input id="sell-in" type="number" min="0" step="any" placeholder="0.0" inputmode="decimal" autocomplete="off">
+            <span class="unit">EVA</span>
+          </div>
+        </div>
+        <div class="swap-arrow" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg>
+        </div>
+        <div class="field">
+          <div class="field-head"><span data-i18n="trade.ethReceive"></span></div>
+          <div class="output-row"><span id="sell-out">—</span><span class="unit">ETH</span></div>
+        </div>
+        <div class="trade-meta"><span data-i18n="trade.price"></span>: <b id="sell-price">—</b><span class="sep"></span><span data-i18n="trade.slippage"></span>: <b>2%</b></div>
+        <p class="approve-note" data-i18n="trade.approveNote"></p>
+        <button id="sell-btn" class="cta wide magnetic" type="button" data-i18n="trade.sellBtn"></button>
+      </div>
+
+      <div id="tx-status" class="tx-status" aria-live="polite"></div>
+      <p class="disclaimer" data-i18n="trade.disclaimer"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTRACTS ============ -->
+<section id="contracts">
+  <div class="container">
+    <h2 class="section-title reveal" data-i18n="contracts.title"></h2>
+    <p class="section-sub reveal" data-i18n="contracts.sub"></p>
+    <div class="contracts-list" id="contracts-list"></div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="EVA logo" class="footer-logo">
+      <span>EVA</span>
+    </div>
+    <p data-i18n="footer.rights"></p>
+    <p class="risk" data-i18n="footer.risk"></p>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
