@@ -20,7 +20,7 @@ function applyI18n() {
   $("#lang-toggle").textContent = I18N[lang].langName;
   if (!$("#wallet-notice").classList.contains("hidden")) showWalletNotice();
   renderBenefits(); renderProblems(); renderTokenomics(); renderContracts();
-  updateWalletBtn(); refreshTradeButtons(); observeReveals();
+  updateWalletBtn(); refreshTradeButtons(); setBgmUI(bgmOn); observeReveals();
 }
 
 /* ---------- dynamic sections ---------- */
@@ -367,6 +367,42 @@ async function refreshBalances() {
   } catch {}
 }
 
+/* ----- ambient music ----- */
+const bgm = new Audio("ambient.mp3");
+bgm.loop = true; bgm.preload = "auto"; bgm.volume = 0;
+let bgmTimer = null, bgmOn = false;
+function setBgmUI(on) {
+  bgmOn = on;
+  const b = $("#sound-toggle");
+  if (!b) return;
+  b.classList.toggle("playing", on);
+  const label = t(on ? "sound.toggleOff" : "sound.toggleOn");
+  b.setAttribute("aria-label", label); b.title = label;
+}
+function fadeBgm(to, ms) {
+  clearInterval(bgmTimer); ms = ms || 2200;
+  const from = bgm.volume, t0 = performance.now();
+  bgmTimer = setInterval(() => {
+    const k = Math.min(1, (performance.now() - t0) / ms);
+    bgm.volume = from + (to - from) * k;
+    if (k >= 1) { clearInterval(bgmTimer); bgmTimer = null; if (to === 0 && !bgm.paused) bgm.pause(); }
+  }, 60);
+}
+async function startBgm() {
+  setBgmUI(true);
+  try { await bgm.play(); fadeBgm(0.28); localStorage.setItem("eva-bgm", "on"); }
+  catch (e) { setBgmUI(false); }
+}
+function stopBgm() { setBgmUI(false); fadeBgm(0); localStorage.setItem("eva-bgm", "off"); }
+function initBgm() {
+  $("#sound-toggle").addEventListener("click", () => bgmOn ? stopBgm() : startBgm());
+  setBgmUI(false);
+  if (localStorage.getItem("eva-bgm") === "on") {
+    const kick = () => { document.removeEventListener("pointerdown", kick); startBgm(); };
+    document.addEventListener("pointerdown", kick);
+  }
+}
+
 /* ----- trade UI ----- */
 function txMsg(cls, html) {
   $("#tx-status").innerHTML = html ? `<span class="${cls}">${html}</span>` : "";
@@ -494,7 +530,7 @@ function initTrade() {
 document.addEventListener("DOMContentLoaded", () => {
   applyI18n();
   initNav(); initCanvas(); initOrbs(); initCursor(); initMagnetic(); initTilt();
-  initWallet(); initTrade();
+  initWallet(); initTrade(); initBgm();
   if (typeof ethers === "undefined") {
     tradingLive = false;
     $("#trade-notlive").classList.remove("hidden");
