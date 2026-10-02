@@ -39,6 +39,7 @@
     <a href="#tokenomics" data-i18n="nav.tokenomics"></a>
     <a href="#trade" data-i18n="nav.trade"></a>
     <a href="#contracts" data-i18n="nav.contracts"></a>
+    <a href="docs.html" data-i18n="nav.docs"></a>
   </nav>
   <div class="nav-actions">
     <button id="lang-toggle" class="pill-btn" type="button"></button>
@@ -129,18 +130,19 @@
   <div class="container">
     <h2 class="section-title reveal" data-i18n="tokenomics.title"></h2>
     <p class="supply-line reveal" data-i18n="tokenomics.supply"></p>
-    <p class="founder-line reveal" data-i18n="tokenomics.founder"></p>
+    <p class="founder-line reveal" data-i18n="tokenomics.founder" data-i18n-html></p>
     <div class="glass table-card reveal">
       <table id="tokenomics-table"><tbody></tbody></table>
     </div>
-    <p class="taxes-line reveal" data-i18n="tokenomics.taxes"></p>
+    <p class="migration-line reveal" data-i18n="tokenomics.migration"></p>
+    <p class="taxes-line reveal" data-i18n="tokenomics.taxes" data-i18n-html></p>
   </div>
 </section>
 
 <!-- ============ TRADE (dApp) ============ -->
 <section id="trade">
   <div class="container">
-    <h2 class="section-title reveal" data-i18n="trade.title"></h2>
+    <h2 class="section-title reveal" id="trade-title"></h2>
     <p class="section-sub reveal" data-i18n="trade.sub"></p>
     <div id="trade-notlive" class="glass notice hidden"><span data-i18n="trade.notLive"></span></div>
     <div id="wallet-notice" class="glass notice hidden"></div>
@@ -218,7 +220,7 @@
       <img src="logo.png" alt="EVA logo" class="footer-logo">
       <span>EVA</span>
     </div>
-    <p data-i18n="footer.rights"></p>
+    <p><span data-i18n="footer.rights"></span> <a class="footer-code" target="_blank" rel="noopener" href="https://github.com/RIO4140/eva-contracts" data-i18n="footer.code"></a></p>
     <p class="risk" data-i18n="footer.risk"></p>
   </div>
 </footer>
