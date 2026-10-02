@@ -336,10 +336,20 @@ function disconnect() {
   $("#eth-bal").textContent = "—"; $("#eva-bal").textContent = "—";
   updateWalletBtn(); refreshTradeButtons();
 }
+async function switchChain() {
+  chainOk = await ensureChain();
+  if (chainOk) {
+    const bp = new ethers.BrowserProvider(window.ethereum);
+    signer = await bp.getSigner();
+    coreSigner = new ethers.Contract(CORE, ABI, signer);
+    refreshBalances();
+  }
+  updateWalletBtn(); refreshTradeButtons();
+}
 function initWallet() {
   $("#wallet-btn").addEventListener("click", async () => {
     if (!account) return connectWallet();
-    if (!chainOk) { chainOk = await ensureChain(); if (chainOk) { const bp = new ethers.BrowserProvider(window.ethereum); signer = await bp.getSigner(); coreSigner = new ethers.Contract(CORE, ABI, signer); refreshBalances(); } updateWalletBtn(); refreshTradeButtons(); return; }
+    if (!chainOk) return switchChain();
     disconnect();
   });
   if (window.ethereum) {
@@ -363,13 +373,18 @@ function txMsg(cls, html) {
 }
 const txLink = h => `<a target="_blank" rel="noopener" href="https://basescan.org/tx/${h}">${h.slice(0, 10)}…</a>`;
 function refreshTradeButtons() {
-  const connected = account && chainOk;
-  // enabled while live so the button itself can trigger wallet connect
+  // enabled while live so the button itself can trigger wallet connect / chain switch
   $("#buy-btn").disabled = !tradingLive;
   $("#sell-btn").disabled = !tradingLive;
-  if (!account) {
+  if (!tradingLive) {
+    $("#buy-btn").textContent = t("trade.buyBtn");
+    $("#sell-btn").textContent = t("trade.sellBtn");
+  } else if (!account) {
     $("#buy-btn").textContent = t("trade.connectFirst");
     $("#sell-btn").textContent = t("trade.connectFirst");
+  } else if (!chainOk) {
+    $("#buy-btn").textContent = t("wallet.wrongNetwork");
+    $("#sell-btn").textContent = t("wallet.wrongNetwork");
   } else {
     $("#buy-btn").textContent = t("trade.buyBtn");
     $("#sell-btn").textContent = t("trade.sellBtn");
@@ -404,13 +419,13 @@ async function doBuy() {
   if (!coreSigner) return;
   const inp = $("#buy-in").value.trim();
   let val;
-  try { val = ethers.parseEther(inp); } catch { return; }
-  if (val <= 0n) return;
-  txMsg("pending", t("trade.waitingWallet"));
+  try { val = ethers.parseEther(inp); } catch { txMsg("err", t("trade.enterAmount")); return; }
+  if (val <= 0n) { txMsg("err", t("trade.enterAmount")); return; }
   try {
     const [evaOut] = await coreRO().buyPreview(val);
     const minEvaOut = evaOut * 98n / 100n;
     const deadline = BigInt(Math.floor(Date.now() / 1000) + 1200);
+    txMsg("pending", t("trade.waitingWallet"));
     const tx = await coreSigner.buy(minEvaOut, deadline, { value: val });
     txMsg("pending", `${t("trade.txSent")}: ${txLink(tx.hash)}`);
     const rc = await tx.wait();
@@ -426,13 +441,13 @@ async function doSell() {
   if (!coreSigner) return;
   const inp = $("#sell-in").value.trim();
   let amt;
-  try { amt = ethers.parseEther(inp); } catch { return; }
-  if (amt <= 0n) return;
-  txMsg("pending", t("trade.waitingWallet"));
+  try { amt = ethers.parseEther(inp); } catch { txMsg("err", t("trade.enterAmount")); return; }
+  if (amt <= 0n) { txMsg("err", t("trade.enterAmount")); return; }
   try {
     const [ethOut] = await coreRO().sellPreview(amt);
     const minEthOut = ethOut * 98n / 100n;
     const deadline = BigInt(Math.floor(Date.now() / 1000) + 1200);
+    txMsg("pending", t("trade.waitingWallet"));
     const tx = await coreSigner.sell(amt, minEthOut, deadline);
     txMsg("pending", `${t("trade.txSent")}: ${txLink(tx.hash)}`);
     const rc = await tx.wait();
@@ -455,10 +470,10 @@ function initTrade() {
   });
   $("#buy-in").addEventListener("input", debounce(previewBuy, 450));
   $("#sell-in").addEventListener("input", debounce(previewSell, 450));
-  $("#buy-btn").addEventListener("click", () => account ? doBuy() : connectWallet());
-  $("#sell-btn").addEventListener("click", () => account ? doSell() : connectWallet());
+  $("#buy-btn").addEventListener("click", () => { if (!account) return connectWallet(); if (!chainOk) return switchChain(); doBuy(); });
+  $("#sell-btn").addEventListener("click", () => { if (!account) return connectWallet(); if (!chainOk) return switchChain(); doSell(); });
   $("#eth-max").addEventListener("click", async () => {
-    if (!account) return;
+    if (!account) { connectWallet(); return; }
     try {
       const bal = await roProvider().getBalance(account);
       const gas = ethers.parseEther("0.0008");
@@ -467,7 +482,7 @@ function initTrade() {
     } catch {}
   });
   $("#eva-max").addEventListener("click", async () => {
-    if (!account) return;
+    if (!account) { connectWallet(); return; }
     try {
       $("#sell-in").value = ethers.formatUnits(await coreRO().balanceOf(account), 18);
       previewSell();
