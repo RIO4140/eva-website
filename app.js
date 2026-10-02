@@ -15,8 +15,11 @@ function applyI18n() {
   document.title = "EVA — " + t("hero.badge");
   $$("[data-i18n]").forEach(el => {
     const v = t(el.dataset.i18n);
-    if (typeof v === "string") el.textContent = v;
+    if (typeof v !== "string") return;
+    if (el.hasAttribute("data-i18n-html")) el.innerHTML = v;
+    else el.textContent = v;
   });
+  $("#trade-title").textContent = t(TRADING_LAUNCHED ? "trade.title" : "trade.titleOff");
   $("#lang-toggle").textContent = I18N[lang].langName;
   if (!$("#wallet-notice").classList.contains("hidden")) showWalletNotice();
   renderBenefits(); renderProblems(); renderTokenomics(); renderContracts();
@@ -542,7 +545,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initWallet(); initTrade(); initBgm();
   if (typeof ethers === "undefined") {
     tradingLive = false;
-    $("#trade-notlive").classList.remove("hidden");
+    setNotliveNotice();
     refreshTradeButtons();
   } else {
     (async () => {
