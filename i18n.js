@@ -9,15 +9,16 @@ en: {
     title:"EVA",
     tagline:"21 million coins. Fixed. No individual admin powers.",
     sub:"Priced by a bonding curve on Base — no liquidity pool to drain.",
-    ctaBuy:"Buy EVA", ctaLearn:"Learn more",
+    ctaBuy:"Trading soon", ctaLearn:"Learn more",
     price:"Price", perEva:"per EVA",
-    risk:"Not financial advice. The contracts have not undergone an independent external audit yet."
+    risk:"For informational purposes only — not financial advice. The contracts have not undergone an independent external audit yet."
   },
+  common: { unavailable:"Not available" },
   stats: { price:"Price", mcap:"Market Cap", supply:"Circulating Supply", reserve:"Reserve" },
   about: {
     title:"What is EVA?",
     p1:"EVA is a digital currency on the Base network with a hard cap of 21,000,000 — written into the smart contract, never to rise.",
-    p2:"Its price is set by a bonding curve, not a liquidity pool: there is no shared pool to drain, and every purchase funds the reserve that pays future sales. There are no individual admin powers — any change must pass a public on-chain vote. Around the core contract, 15 smart contracts are deployed on Base: non-transferable loyalty badges, open automation, a live danger score, a multisig treasury, streaming payments, vesting schedules, subscriptions, conditional escrow, a reward distributor, and a token factory."
+    p2:"Its price is set by a bonding curve, not a liquidity pool: there is no shared pool to drain, and every purchase funds the reserve that pays future sales. Any change must pass a public on-chain vote. Around the core contract, 15 smart contracts are deployed on Base: non-transferable loyalty badges, open automation, a live danger score, a multisig treasury, streaming payments, vesting schedules, subscriptions, conditional escrow, a reward distributor, and a token factory."
   },
   benefits: {
     title:"Why EVA?",
@@ -76,6 +77,7 @@ en: {
     approveNote:"One-tap sell — no separate approval transaction needed.",
     buyBtn:"Buy EVA", sellBtn:"Sell EVA",
     notLive:"Could not reach the Base network — check your connection.",
+    comingSoon:"Trading opens soon.",
     txSent:"Transaction sent", txConfirmed:"Confirmed", txFailed:"Transaction failed",
     disclaimer:"Trading crypto is risky. Prices can go down. Only trade what you can afford to lose.",
     connectFirst:"Connect Wallet",
@@ -105,7 +107,7 @@ en: {
       ["Conditional Escrow", "0x05f52c742B6cd0f2b063A244014d265FDdD81Ca4"],
       ["Payment Streams", "0x3FC58Dd718ffbE60b7AD8d92c91B90B1b370959f"],
       ["Subscriptions", "0xe31DF8fC121bdBEA96eD4FA48Ce10ce678b3dda6"],
-      ["Token Factory", "0x830F2d58A5F4395A6d2464A878FBC45D8bA3aDda"],
+      ["Token Factory (create new tokens)", "0x830F2d58A5F4395A6d2464A878FBC45D8bA3aDda"],
       ["Vesting Schedules", "0x699C3C8a59b28110BB27152D777B4e7b1CC11d76"]
     ],
     view:"View on BaseScan", copied:"Copied"
@@ -120,17 +122,18 @@ ar: {
   hero: {
     badge:"عملة رقمية على شبكة Base",
     title:"EVA",
-    tagline:"21 مليون عملة ثابتة. بلا صلاحيات تحكم فردية.",
+    tagline:"21 مليون عملة ثابتة. بلا صلاحيات إدارية فردية.",
     sub:"يُحدَّد السعر عبر منحنى الربط على شبكة Base — بلا مجمع سيولة يمكن استنزافه.",
-    ctaBuy:"شراء EVA", ctaLearn:"اعرف المزيد",
+    ctaBuy:"التداول قريبًا", ctaLearn:"اعرف المزيد",
     price:"السعر", perEva:"لكل EVA",
-    risk:"ليست نصيحة مالية. لم تخضع العقود لتدقيق خارجي مستقل بعد."
+    risk:"المحتوى لأغراض معلوماتية وليس نصيحة مالية. لم تخضع العقود لتدقيق خارجي مستقل بعد."
   },
+  common: { unavailable:"غير متاح حاليًا" },
   stats: { price:"السعر", mcap:"القيمة السوقية", supply:"المعروض المتداول", reserve:"الاحتياطي" },
   about: {
     title:"ما هي EVA؟",
     p1:"EVA عملة رقمية على شبكة Base بسقف أقصى 21,000,000 عملة — مكتوب في العقد الذكي، ولا يرتفع أبدًا.",
-    p2:"يُحدَّد سعرها عبر منحنى الربط (Bonding Curve) لا عبر مجمع سيولة: لا يوجد مجمع مشترك يمكن استنزافه، وكل عملية شراء تموّل الاحتياطي الذي يدفع المبيعات اللاحقة. ولا توجد صلاحيات تحكم فردية — أي تغيير يجب أن يعبر تصويتًا علنيًا على البلوكتشين. وحول العقد الأساسي، تم نشر 15 عقدًا ذكيًا على Base: شارات ولاء غير قابلة للتحويل، وأتمتة مفتوحة للجميع، ودرجة خطر حيّة، وخزانة متعددة التوقيعات، ومدفوعات متدفقة، وجداول استحقاق، واشتراكات، وضمان مشروط، وموزّع مكافآت، ومصنع عملات."
+    p2:"يُحدَّد سعرها عبر منحنى الربط (Bonding Curve) لا عبر مجمع سيولة: لا يوجد مجمع مشترك يمكن استنزافه، وكل عملية شراء تموّل الاحتياطي الذي يدفع المبيعات اللاحقة. أي تغيير يجب أن يعبر تصويتًا علنيًا على البلوكتشين. وحول العقد الأساسي، تم نشر 15 عقدًا ذكيًا على Base: شارات ولاء غير قابلة للتحويل، وأتمتة مفتوحة للجميع، ودرجة خطر حيّة، وخزانة متعددة التوقيعات، ومدفوعات متدفقة، وجداول استحقاق، واشتراكات، وضمان مشروط، وموزّع مكافآت، ومصنع عملات."
   },
   benefits: {
     title:"لماذا EVA؟",
@@ -189,6 +192,7 @@ ar: {
     approveNote:"بيع بنقرة واحدة — لا حاجة لمعاملة موافقة منفصلة.",
     buyBtn:"شراء EVA", sellBtn:"بيع EVA",
     notLive:"تعذّر الاتصال بشبكة Base — تحقق من اتصالك بالإنترنت.",
+    comingSoon:"التداول سيُفتتح قريبًا.",
     txSent:"تم إرسال المعاملة", txConfirmed:"تم التأكيد", txFailed:"فشلت المعاملة",
     disclaimer:"تداول العملات الرقمية محفوف بالمخاطر. قد تنخفض الأسعار. لا تتداول إلا بما يمكنك تحمّل خسارته.",
     connectFirst:"ربط المحفظة",
@@ -218,7 +222,7 @@ ar: {
       ["الضمان المشروط", "0x05f52c742B6cd0f2b063A244014d265FDdD81Ca4"],
       ["المدفوعات المتدفقة", "0x3FC58Dd718ffbE60b7AD8d92c91B90B1b370959f"],
       ["الاشتراكات", "0xe31DF8fC121bdBEA96eD4FA48Ce10ce678b3dda6"],
-      ["مصنع العملات", "0x830F2d58A5F4395A6d2464A878FBC45D8bA3aDda"],
+      ["مصنع العملات (إنشاء عملات جديدة)", "0x830F2d58A5F4395A6d2464A878FBC45D8bA3aDda"],
       ["جداول الاستحقاق", "0x699C3C8a59b28110BB27152D777B4e7b1CC11d76"]
     ],
     view:"عرض على BaseScan", copied:"تم النسخ"
