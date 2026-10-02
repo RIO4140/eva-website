@@ -7,7 +7,7 @@ en: {
   hero: {
     badge:"DeFi Token on Base",
     title:"EVA",
-    tagline:"A digital currency priced by a published formula — not by any single party's decision — capped at 21 million units.",
+    tagline:"A digital currency capped at 21 million units.",
     sub:"Priced by a bonding curve on Base.",
     ctaBuy:"Trading soon", ctaLearn:"Learn more",
     price:"Price", perEva:"per EVA",
@@ -186,7 +186,7 @@ ar: {
   hero: {
     badge:"عملة رقمية على شبكة Base",
     title:"EVA",
-    tagline:"عملة رقمية يُحسب سعرها بمعادلة منشورة لا بقرار جهة بعينها، وبحد أقصى 21 مليون وحدة.",
+    tagline:"عملة رقمية بسقف أقصى 21 مليون وحدة.",
     sub:"يُحدَّد السعر عبر منحنى الربط على شبكة Base.",
     ctaBuy:"التداول قريبًا", ctaLearn:"اعرف المزيد",
     price:"السعر", perEva:"لكل EVA",
