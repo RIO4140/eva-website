@@ -18,6 +18,7 @@ function applyI18n() {
     if (typeof v === "string") el.textContent = v;
   });
   $("#lang-toggle").textContent = I18N[lang].langName;
+  if (!$("#wallet-notice").classList.contains("hidden")) showWalletNotice();
   renderBenefits(); renderProblems(); renderTokenomics(); renderContracts();
   updateWalletBtn(); refreshTradeButtons(); observeReveals();
 }
@@ -276,6 +277,14 @@ async function refreshStats() {
   }
 }
 
+/* ----- wallet notice (no provider) ----- */
+function showWalletNotice() {
+  const n = $("#wallet-notice");
+  n.innerHTML = `<strong>${t("trade.noWallet")}</strong><p>${t("trade.noWalletMsg")}</p>`;
+  n.classList.remove("hidden");
+  n.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+function hideWalletNotice() { $("#wallet-notice").classList.add("hidden"); }
 /* ----- wallet ----- */
 const shortAddr = a => a.slice(0, 6) + "…" + a.slice(-4);
 function updateWalletBtn() {
@@ -306,7 +315,8 @@ async function ensureChain() {
   }
 }
 async function connectWallet() {
-  if (typeof window.ethereum === "undefined") { txMsg("err", t("trade.connectFirst")); return; }
+  if (typeof window.ethereum === "undefined") { showWalletNotice(); return; }
+  hideWalletNotice();
   try {
     const bp = new ethers.BrowserProvider(window.ethereum);
     const accs = await bp.send("eth_requestAccounts", []);
