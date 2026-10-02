@@ -7,8 +7,8 @@ en: {
   hero: {
     badge:"Sovereign DeFi Token on Base",
     title:"EVA",
-    tagline:"The token that can't be killed.",
-    sub:"A sovereign token with bonding-curve pricing, a self-funding reserve, and an on-chain immune system — no admin keys, no backdoors, no rug pulls.",
+    tagline:"Sovereign finance on Base.",
+    sub:"A decentralized token with bonding-curve pricing and an on-chain immune system.",
     ctaBuy:"Buy EVA", ctaLearn:"How it works",
     price:"Live price", perEva:"per EVA"
   },
@@ -21,12 +21,12 @@ en: {
   benefits: {
     title:"Why EVA?",
     items:[
-      {t:"Can't be rugged", d:"No admin keys, no backdoors, no owner functions that can drain funds. The rules are immutable and public."},
-      {t:"No drainable pool", d:"Price comes from curve math, not a DEX pool. There is nothing for an attacker to drain."},
-      {t:"Self-funding reserve", d:"Buys fund the reserve that pays future sells. The system finances its own liquidity."},
-      {t:"Buy-and-burn", d:"A share of trading taxes buys EVA and burns it, reducing supply as activity grows."},
-      {t:"Staking rewards", d:"Lock EVA and earn a share of protocol fees with multipliers up to 4x for long-term lockers."},
-      {t:"On-chain immune system", d:"An incident registry plus adaptive defense that monitors pressure and responds within pre-authorized bounds."}
+      {t:"Decentralized", d:"No single party controls EVA."},
+      {t:"Rug-proof", d:"No admin keys, no backdoors."},
+      {t:"Self-funding", d:"Trading fees sustain the protocol."},
+      {t:"Deflationary", d:"Buy-and-burn reduces supply."},
+      {t:"Staking rewards", d:"Earn yield by locking EVA."},
+      {t:"On-chain immunity", d:"Watches threats and adapts."}
     ]
   },
   problems: {
@@ -74,7 +74,9 @@ en: {
     notLive:"Trading is not live yet — the curve activates after launch.",
     txSent:"Transaction sent", txConfirmed:"Confirmed", txFailed:"Transaction failed",
     disclaimer:"Trading crypto is risky. Prices can go down. Only trade what you can afford to lose.",
-    connectFirst:"Connect your wallet to trade"
+    connectFirst:"Connect your wallet to trade",
+    noWallet:"No wallet detected",
+    noWalletMsg:"Open this page inside your wallet's built-in browser (MetaMask or Coinbase Wallet app), or install the MetaMask extension on desktop — then tap Connect again."
   },
   contracts: {
     title:"Contracts",
@@ -97,8 +99,8 @@ ar: {
   hero: {
     badge:"عملة سيادية على شبكة Base",
     title:"EVA",
-    tagline:"العملة اللي مستحيل تموت.",
-    sub:"عملة سيادية بسعر من منحنى رياضي، واحتياطي بيموّل نفسه، وجهاز مناعة على البلوكشين — من غير مفاتيح تحكم، ومن غير أبواب خلفية، ومن غير سحب بساط.",
+    tagline:"مالية سيادية على شبكة Base.",
+    sub:"عملة لامركزية بسعر منحنى ذكي وجهاز مناعة على البلوكشين.",
     ctaBuy:"اشتري EVA", ctaLearn:"إزاي بتشتغل",
     price:"السعر الحالي", perEva:"لكل EVA"
   },
@@ -111,12 +113,12 @@ ar: {
   benefits: {
     title:"ليه EVA؟",
     items:[
-      {t:"مستحيل تتسرق", d:"مفيش مفاتيح تحكم ولا أبواب خلفية ولا دوال تسحب الفلوس. القواعد ثابتة وعلنية."},
-      {t:"مفيش مجمع يتفضّى", d:"السعر من معادلة المنحنى مش من مجمع تداول. مفيش حاجة أصلًا تتسرق."},
-      {t:"احتياطي بيموّل نفسه", d:"المشتريات بتموّل الاحتياطي اللي بيدفع البيع اللي جاي. النظام بيموّل سيولته بنفسه."},
-      {t:"شراء وحرق", d:"جزء من ضرائب التداول بيشتري EVA ويحرقها، فالمعروض بيقل كل ما النشاط يزيد."},
-      {t:"مكافآت تخزين", d:"اقفل عملاتك واكسب نصيب من رسوم البروتوكول بمضاعفات لحد 4x للحابسين الطويلين."},
-      {t:"جهاز مناعة على السلسلة", d:"سجل حوادث + دفاع تكيّفي بيراقب الضغط وبيرد في حدود مسموحة مسبقًا."}
+      {t:"اللامركزية", d:"لا يتحكم فيها طرف واحد."},
+      {t:"ضد سحب البساط", d:"بلا مفاتيح تحكم أو أبواب خلفية."},
+      {t:"تمويل ذاتي", d:"رسوم التداول تدعم البروتوكول."},
+      {t:"انكماشية", d:"الحرق يقلل المعروض."},
+      {t:"مكافآت التخزين", d:"عائد على حبس العملة."},
+      {t:"مناعة على السلسلة", d:"تراقب التهديدات وتتكيف."}
     ]
   },
   problems: {
@@ -164,7 +166,9 @@ ar: {
     notLive:"التداول لسه متفعلش — المنحنى هيشتغل بعد الإطلاق.",
     txSent:"اتبعَت المعاملة", txConfirmed:"اتأكدت", txFailed:"المعاملة فشلت",
     disclaimer:"تداول العملات خطر. الأسعار ممكن تنزل. تداول بس اللي تقدر تخسره.",
-    connectFirst:"اربط محفظتك عشان تتداول"
+    connectFirst:"اربط محفظتك عشان تتداول",
+    noWallet:"لم يتم العثور على محفظة",
+    noWalletMsg:"افتح الصفحة من المتصفح الداخلي لتطبيق محفظتك (MetaMask أو Coinbase Wallet)، أو ثبّت إضافة MetaMask على الكمبيوتر — ثم اضغط ربط المحفظة مجددًا."
   },
   contracts: {
     title:"العقود",
