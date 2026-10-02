@@ -48,7 +48,7 @@ function renderContracts() {
   $("#contracts-list").innerHTML = t("contracts.rows").map(r => `
     <div class="contract-row glass reveal">
       <span class="contract-name">${r[0]}</span>
-      <code class="contract-addr">${trunc(r[1])}</code>
+      <code class="contract-addr">${r[1]}</code>
       <span class="contract-actions">
         <button class="mini-btn copy-btn" type="button" data-addr="${r[1]}">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
@@ -191,12 +191,15 @@ function initNav() {
     lang = lang === "en" ? "ar" : "en";
     localStorage.setItem("eva-lang", lang);
     applyI18n();
+    setNotliveNotice();
   });
 }
 
 /* ================= dApp ================= */
 const CORE = "0x0A834888B15d249f55498Dd16ac8a64B8c258396";
 const BASE_CHAIN_ID = 8453n;
+// اقلبها true عند الإطلاق الرسمي للتداول — العقد نفسه يسمح بالتداول تقنيًا، والقفل هنا من الواجهة فقط
+const TRADING_LAUNCHED = false;
 const RPCS = ["https://mainnet.base.org", "https://base.publicnode.com", "https://1rpc.io/base"];
 let rpcUrl = RPCS[0];
 async function pickRpc() {
@@ -247,6 +250,13 @@ function animateValue(el, target, fmt, dur = 1500) {
     if (k < 1) requestAnimationFrame(step); else el.textContent = fmt(target);
   })(t0);
 }
+let statsConnOk = false;
+function setNotliveNotice() {
+  const el = $("#trade-notlive");
+  if (TRADING_LAUNCHED && statsConnOk) { el.classList.add("hidden"); return; }
+  el.classList.remove("hidden");
+  el.firstElementChild.textContent = t(!TRADING_LAUNCHED ? "trade.comingSoon" : "trade.notLive");
+}
 async function refreshStats() {
   try {
     const c = coreRO();
@@ -256,25 +266,23 @@ async function refreshStats() {
     let supply = null, reserve = null;
     try { supply = Number(ethers.formatUnits(await c.totalSupply(), 18)); } catch {}
     try { reserve = Number(ethers.formatEther(await c.curveReserveETH())); } catch {}
-    tradingLive = true;
-    $("#trade-notlive").classList.add("hidden");
+    statsConnOk = true;
     const set = (id, v, fmt) => {
       const el = $(id);
       if (!statsAnimated) animateValue(el, v, fmt); else el.textContent = fmt(v);
     };
-    set("#hero-price", price, fmtUSD);
     set("#stat-price", price, fmtUSD);
     set("#stat-mcap", mcap, fmtMcap);
     if (supply !== null) set("#stat-supply", supply, v => fmtEVA(v) + " EVA");
     if (reserve !== null) set("#stat-reserve", reserve, v => fmtETH(v) + " ETH");
     statsAnimated = true;
-    refreshTradeButtons();
   } catch {
-    tradingLive = false;
-    $("#trade-notlive").classList.remove("hidden");
-    ["#hero-price", "#stat-price", "#stat-mcap", "#stat-supply", "#stat-reserve"].forEach(id => $(id).textContent = "—");
-    refreshTradeButtons();
+    statsConnOk = false;
+    ["#stat-price", "#stat-mcap", "#stat-supply", "#stat-reserve"].forEach(id => $(id).textContent = t("common.unavailable"));
   }
+  tradingLive = TRADING_LAUNCHED && statsConnOk;
+  setNotliveNotice();
+  refreshTradeButtons();
 }
 
 /* ----- wallet notice (no provider) ----- */
