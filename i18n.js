@@ -91,6 +91,7 @@ en: {
     ],
     view:"View on BaseScan", copied:"Copied"
   },
+  sound: { toggleOn:"Play ambient music", toggleOff:"Mute music" },
   footer: { rights:"EVA — a token on Base. Built in the open.", risk:"Crypto assets are volatile. Do your own research." }
 },
 ar: {
@@ -184,6 +185,7 @@ ar: {
     ],
     view:"عرض على BaseScan", copied:"تم النسخ"
   },
+  sound: { toggleOn:"تشغيل الموسيقى الهادئة", toggleOff:"كتم الموسيقى" },
   footer: { rights:"EVA — عملة رقمية على Base. تُبنى في العلن.", risk:"العملات الرقمية متقلبة. قم بأبحاثك الخاصة." }
 }
 };
