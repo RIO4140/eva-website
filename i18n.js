@@ -7,8 +7,8 @@ en: {
   hero: {
     badge:"DeFi Token on Base",
     title:"EVA",
-    tagline:"Engineered against rug pulls and pool drains.",
-    sub:"A token with bonding-curve pricing and an on-chain immune system.",
+    tagline:"Money with an immune system.",
+    sub:"A token priced by a bonding curve on Base — no liquidity pool to drain.",
     ctaBuy:"Buy EVA", ctaLearn:"Learn more",
     price:"Price", perEva:"per EVA"
   },
@@ -25,7 +25,7 @@ en: {
       {t:"No pool to drain", d:"Price comes from the bonding curve, not a shared pool."},
       {t:"Self-funding", d:"Buys fund the reserve that pays future sells."},
       {t:"Buy-and-burn", d:"Trading taxes buy back and burn EVA once activity thresholds are met."},
-      {t:"Staking rewards", d:"Earn yield by locking EVA."},
+      {t:"Staking rewards", d:"Earn yield by locking EVA — up to 4x for long locks."},
       {t:"On-chain immune system", d:"Monitors threats and publishes its assessment."}
     ]
   },
@@ -45,7 +45,7 @@ en: {
     sub:"Two independent smart contracts support the EVA core. They cannot access funds or change parameters — they monitor, record, and advise.",
     registry:{t:"Incident Registry", d:"A permanent on-chain record of every reported incident — hacks, anomalies, market shocks — each with a severity rating. Spam-resistant by design, with priority handling for critical reports."},
     defense:{t:"Adaptive Defense", d:"Reads the incident log and live market signals (volatility, depth, time-weighted average price) and computes a defense level from 0 to 3. It escalates immediately under genuine pressure and de-escalates after sustained calm. Incidents alone cannot trigger escalation without market corroboration."},
-    note:"Advisory only: it cannot halt trading, move funds, or modify parameters. Wider responses go through community governance."
+    note:"Like a smoke detector, not a firefighter: it monitors everything and raises the alarm — the community decides the response. It cannot halt trading, move funds, or modify parameters."
   },
   tokenomics: {
     title:"Tokenomics",
@@ -100,8 +100,8 @@ ar: {
   hero: {
     badge:"عملة رقمية على شبكة Base",
     title:"EVA",
-    tagline:"مصمَّمة ضد سحب البساط واستنزاف المجمعات.",
-    sub:"عملة يُحتسب سعرها عبر المنحنى الرياضي، ونظام مناعة يعمل على البلوكشين.",
+    tagline:"مال بجهاز مناعة.",
+    sub:"عملة يُحتسب سعرها بالمنحنى الرياضي على شبكة Base — بلا مجمع سيولة يمكن استنزافه.",
     ctaBuy:"شراء EVA", ctaLearn:"اقرأ المزيد",
     price:"السعر", perEva:"لكل EVA"
   },
@@ -118,7 +118,7 @@ ar: {
       {t:"بلا مجمع قابل للاستنزاف", d:"السعر من منحنى البيع والشراء لا من مجمع مشترك."},
       {t:"تمويل ذاتي", d:"المشتريات تموّل الاحتياطي الذي يدفع المبيعات اللاحقة."},
       {t:"الحرق", d:"ضرائب التداول تشتري EVA وتحرقها مع نمو النشاط."},
-      {t:"مكافآت التخزين", d:"عائد مقابل تجميد العملة."},
+      {t:"مكافآت التخزين", d:"عائد مقابل تجميد العملة — حتى 4 أضعاف للأقفال الطويلة."},
       {t:"مناعة على البلوكتشين", d:"يرصد التهديدات وينشر تقييمه على البلوكتشين."}
     ]
   },
@@ -138,7 +138,7 @@ ar: {
     sub:"عقدان ذكيان مستقلان يدعمان قلب EVA؛ لا يمسان الأموال ولا يغيّران أي إعدادات — يرصدان ويسجّلان ويقدّمان التوصيات.",
     registry:{t:"سجل الحوادث", d:"سجل دائم على البلوكتشين لكل حادثة مُبلَّغ عنها — اختراقات وحالات شاذة وصدمات سوقية — مصنّف ومقيَّم الخطورة. مضاد للرسائل المزعجة بالتصميم: قيود على معدل البلاغات مع مسارات طوارئ للبلاغات الحرجة."},
     defense:{t:"الدفاع التكيّفي", d:"يقرأ سجل الحوادث وإشارات السوق الحية (التقلب والعمق ومتوسط السعر) ويحتسب مستوى دفاع من 0 إلى 3. يتصاعد فورًا مع الضغط الحقيقي، ويهدأ بعد استقرار متواصل. لا يمكن للحوادث وحدها رفع المستوى دون تأكيد من السوق."},
-    note:"دور استشاري فقط: لا يمكنه إيقاف التداول أو تحريك الأموال أو تعديل الإعدادات. الاستجابات الأوسع تتم عبر حوكمة المجتمع."
+    note:"ككاشف الدخان لا رجل الإطفاء: يرصد كل شيء ويطلق الإنذار — والمجتمع يقرر الاستجابة. لا يمكنه إيقاف التداول أو تحريك الأموال أو تعديل الإعدادات."
   },
   tokenomics: {
     title:"الاقتصاد الرمزي",
