@@ -22,15 +22,16 @@ en: {
   },
   benefits: {
     title:"Why EVA?",
+    verify:"Verify on BaseScan",
     items:[
-      {t:"Hard cap: 21,000,000 coins.", d:"The cap is written into the smart contract and can never rise; burns reduce the circulating supply."},
-      {t:"No individual admin powers.", d:"No centralized control exists — every change goes through a public on-chain vote."},
-      {t:"Bonding-curve pricing.", d:"Every trade executes at its own curve price — no shared liquidity pool."},
-      {t:"15 smart contracts on Base.", d:"A working system around the core contract — the full list with addresses is in the Contracts section below."},
-      {t:"Non-transferable loyalty badges.", d:"Standing earned by holding: badges grow with your balance and holding time, and cannot be sent to another address."},
-      {t:"Automatic buy-and-burn.", d:"Trading fees (1% on buys, 1.5% on sells) are split: 50% to stakers, 30% to the treasury, 20% to buy-and-burn."},
-      {t:"A reserve funding future sales.", d:"Today's purchases flow into a dedicated reserve that pays tomorrow's sellers."},
-      {t:"A live on-chain danger reading.", d:"Twelve market and incident signals fuse into one public score — from calm to critical."}
+      {t:"Hard cap: 21,000,000 coins.", d:"The cap is written into the smart contract and can never rise; burns reduce the circulating supply. No new coins can ever be minted.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"No individual admin powers.", d:"No centralized control exists — every change goes through a public on-chain vote, within the bounds programmed into the contract.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"Bonding-curve pricing.", d:"Every trade executes at its own curve price — no shared liquidity pool. The curve does not guarantee a price floor; the price can fall during sell waves.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"15 smart contracts on Base.", d:"A working system around the core contract — the full list with addresses is in the Contracts section below.", proof:"#contracts"},
+      {t:"Non-transferable loyalty badges.", d:"Standing earned by holding: badges grow with your balance and holding time, and cannot be sent to another address. Badges carry no monetary value and cannot be used as collateral.", proof:"https://basescan.org/address/0xCBFB07577508118864cBeF3f177C834fdc161e6E"},
+      {t:"Automatic buy-and-burn.", d:"Trading fees (1% on buys, 1.5% on sells) are split: 50% to stakers, 30% to the treasury, 20% to buy-and-burn. Execution depends on activity thresholds being met.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"A reserve funding future sales.", d:"Today's purchases flow into a dedicated reserve that pays tomorrow's sellers. The reserve does not guarantee any specific sale price.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"A live on-chain danger reading.", d:"Twelve market and incident signals fuse into one public score — from calm to critical. Advisory only: it cannot halt trading or intervene.", proof:"https://basescan.org/address/0x3409accF2CA1E793D11EeF5D61bD33003691DAda"}
     ]
   },
   problems: {
@@ -137,15 +138,16 @@ ar: {
   },
   benefits: {
     title:"لماذا EVA؟",
+    verify:"تحقق على BaseScan",
     items:[
-      {t:"السقف الأقصى: 21,000,000 عملة.", d:"السقف محدد في العقد الذكي ولا يرتفع أبدًا؛ وعمليات الحرق تخفض المعروض المتداول."},
-      {t:"بلا صلاحيات تحكم فردية.", d:"لا توجد صلاحية تحكم مركزية — أي تغيير يمر عبر تصويت علني على البلوكتشين."},
-      {t:"التسعير عبر منحنى الربط.", d:"كل صفقة تُنفَّذ بسعرها الخاص على المنحنى — بلا مجمع سيولة مشترك."},
-      {t:"15 عقدًا ذكيًا على Base.", d:"منظومة عاملة حول العقد الأساسي — القائمة الكاملة بالعناوين في قسم العقود أدناه."},
-      {t:"شارات ولاء غير قابلة للتحويل.", d:"مكانة تُكتسب بالاحتفاظ: تنمو الشارات مع الرصيد ومدة الاحتفاظ، ولا يمكن إرسالها إلى عنوان آخر."},
-      {t:"إعادة شراء وحرق تلقائية.", d:"تُوزَّع رسوم التداول (1% على الشراء و1.5% على البيع): 50% للمخزِّنين، و30% للخزانة، و20% لإعادة الشراء والحرق."},
-      {t:"احتياطي يموّل المبيعات اللاحقة.", d:"تتدفق مشتريات اليوم إلى احتياطي مخصص يدفع مبيعات الغد."},
-      {t:"قراءة خطر حيّة على البلوكتشين.", d:"تندمج 12 إشارة من السوق والحوادث في درجة واحدة منشورة للجميع — من الهدوء إلى الحرج."}
+      {t:"السقف الأقصى: 21,000,000 عملة.", d:"السقف محدد في العقد الذكي ولا يرتفع أبدًا؛ وعمليات الحرق تخفض المعروض المتداول. لا يمكن سكّ عملات جديدة تحت أي ظرف.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"بلا صلاحيات إدارية فردية.", d:"لا توجد صلاحية تحكم مركزية — أي تغيير يمر عبر تصويت علني على البلوكتشين، ضمن الحدود المبرمجة في العقد.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"التسعير عبر منحنى الربط.", d:"كل صفقة تُنفَّذ بسعرها الخاص على المنحنى — بلا مجمع سيولة مشترك. المنحنى لا يضمن حدًا أدنى للسعر؛ فقد يهبط مع موجات البيع.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"15 عقدًا ذكيًا على Base.", d:"منظومة عاملة حول العقد الأساسي — القائمة الكاملة بالعناوين في قسم العقود أدناه.", proof:"#contracts"},
+      {t:"شارات ولاء غير قابلة للتحويل.", d:"مكانة تُكتسب بالاحتفاظ: تنمو الشارات مع الرصيد ومدة الاحتفاظ، ولا يمكن إرسالها إلى عنوان آخر. الشارات لا تحمل قيمة مالية ولا تُستخدم كضمان.", proof:"https://basescan.org/address/0xCBFB07577508118864cBeF3f177C834fdc161e6E"},
+      {t:"إعادة شراء وحرق تلقائية.", d:"تُوزَّع رسوم التداول (1% على الشراء و1.5% على البيع): 50% للمخزِّنين، و30% للخزانة، و20% لإعادة الشراء والحرق. التنفيذ مرتبط بتحقق عتبات النشاط.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"احتياطي يموّل المبيعات اللاحقة.", d:"تتدفق مشتريات اليوم إلى احتياطي مخصص يدفع مبيعات الغد. الاحتياطي لا يضمن سعر بيع محددًا.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"قراءة خطر حيّة على البلوكتشين.", d:"تندمج 12 إشارة من السوق والحوادث في درجة واحدة منشورة للجميع — من الهدوء إلى الحرج. استشارية فقط: لا توقف التداول ولا تتدخل فيه.", proof:"https://basescan.org/address/0x3409accF2CA1E793D11EeF5D61bD33003691DAda"}
     ]
   },
   problems: {
