@@ -32,7 +32,7 @@ function renderBenefits() {
     <div class="benefit-card glass tilt-card reveal">
       <span class="benefit-num">${String(i + 1).padStart(2, "0")}</span>
       <h3>${b.t}</h3><p>${b.d}</p>
-      ${b.proof ? `<a class="proof-link" target="_blank" rel="noopener" href="${b.proof}">${t("benefits.verify")} ↗</a>` : ""}
+      ${b.proof ? `<a class="proof-link" target="_blank" rel="noopener" href="${b.proof}">${b.proofLabel || t("benefits.verify")} ↗</a>` : ""}
     </div>`).join("");
 }
 function renderProblems() {
@@ -541,6 +541,7 @@ function initTrade() {
 /* ---------- boot ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   applyI18n();
+  ["#stat-price", "#stat-mcap", "#stat-supply", "#stat-reserve"].forEach(id => $(id).textContent = t("common.unavailable"));
   initNav(); initCanvas(); initOrbs(); initCursor(); initMagnetic(); initTilt();
   initWallet(); initTrade(); initBgm();
   if (typeof ethers === "undefined") {
