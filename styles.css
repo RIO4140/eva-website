@@ -276,3 +276,18 @@ footer{border-top:1px solid var(--stroke);padding:44px 20px 54px;background:rgba
   .trade-card{padding:22px 16px}
   td{padding:11px 10px;font-size:.86rem}
 }
+
+/* ---------- ambient sound toggle ---------- */
+.sound-toggle{
+  position:fixed;bottom:22px;inset-inline-end:22px;z-index:200;
+  width:46px;height:46px;border-radius:50%;padding:0;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;color:var(--text);
+  opacity:.7;transition:opacity .25s,transform .25s,box-shadow .25s;
+}
+.sound-toggle:hover{opacity:1;transform:translateY(-2px)}
+.sound-toggle svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sound-toggle .ic-on{display:none}
+.sound-toggle.playing{opacity:1;box-shadow:0 0 24px rgba(0,170,255,.5)}
+.sound-toggle.playing .ic-on{display:block}
+.sound-toggle.playing .ic-off{display:none}
+@media (max-width:640px){.sound-toggle{bottom:16px;inset-inline-end:16px;width:42px;height:42px}}
