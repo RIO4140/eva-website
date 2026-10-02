@@ -2,13 +2,13 @@
 const I18N = {
 en: {
   dir: "ltr", langName: "العربية",
-  nav: { about:"About", benefits:"Why EVA", problems:"Problems Solved", immune:"Monitoring & Alerts", tokenomics:"Tokenomics", trade:"Trade", contracts:"Contracts" },
+  nav: { about:"About", benefits:"Why EVA", problems:"Risks", immune:"Monitoring & Alerts", tokenomics:"Tokenomics", trade:"Trade", contracts:"Contracts", docs:"Docs" },
   wallet: { connect:"Connect Wallet", connected:"Connected", wrongNetwork:"Switch to Base", disconnect:"Disconnect" },
   hero: {
     badge:"DeFi Token on Base",
     title:"EVA",
-    tagline:"21 million coins. Fixed. No individual admin powers.",
-    sub:"Priced by a bonding curve on Base — no liquidity pool to drain.",
+    tagline:"21M max cap. Powers not concentrated in one party.",
+    sub:"Priced by a bonding curve on Base.",
     ctaBuy:"Trading soon", ctaLearn:"Learn more",
     price:"Price", perEva:"per EVA",
     risk:"For informational purposes only — not financial advice. The contracts have not undergone an independent external audit yet."
@@ -17,31 +17,31 @@ en: {
   stats: { price:"Price", mcap:"Market Cap", supply:"Circulating Supply", reserve:"Reserve" },
   about: {
     title:"What is EVA?",
-    p1:"EVA is a digital currency on the Base network with a hard cap of 21,000,000 — written into the smart contract, never to rise.",
-    p2:"Its price is set by a bonding curve, not a liquidity pool: there is no shared pool to drain, and every purchase funds the reserve that pays future sales. Any change must pass a public on-chain vote. Around the core contract, 15 smart contracts are deployed on Base: non-transferable loyalty badges, open automation, a live danger score, a multisig treasury, streaming payments, vesting schedules, subscriptions, conditional escrow, a reward distributor, and a token factory."
+    p1:"EVA is a digital currency on the Base network with a hard cap of 21,000,000 — written into the smart contract; it cannot be raised under the contract code.",
+    p2:"Its price is set by a bonding curve: every trade executes at its own curve price. Any change to the core contract must pass a public vote of coin holders. It is supported by a documented smart-contract system — the full list with addresses is in the Contracts section below."
   },
   benefits: {
     title:"Why EVA?",
     verify:"Verify on BaseScan",
     items:[
-      {t:"Hard cap: 21,000,000 coins.", d:"The cap is written into the smart contract and can never rise; burns reduce the circulating supply. No new coins can ever be minted.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
-      {t:"No individual admin powers.", d:"No centralized control exists — every change goes through a public on-chain vote, within the bounds programmed into the contract.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
-      {t:"Bonding-curve pricing.", d:"Every trade executes at its own curve price — no shared liquidity pool. The curve does not guarantee a price floor; the price can fall during sell waves.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
-      {t:"15 smart contracts on Base.", d:"A working system around the core contract — the full list with addresses is in the Contracts section below.", proof:"#contracts"},
-      {t:"Non-transferable loyalty badges.", d:"Standing earned by holding: badges grow with your balance and holding time, and cannot be sent to another address. Badges carry no monetary value and cannot be used as collateral.", proof:"https://basescan.org/address/0xCBFB07577508118864cBeF3f177C834fdc161e6E"},
-      {t:"Automatic buy-and-burn.", d:"Trading fees (1% on buys, 1.5% on sells) are split: 50% to stakers, 30% to the treasury, 20% to buy-and-burn. Execution depends on activity thresholds being met.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"Hard cap: 21,000,000 coins.", d:"The cap is written into the smart contract and cannot be raised under the contract code; burns reduce the circulating supply.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"Powers not concentrated in one party.", d:"No single party holds control — every change goes through a public on-chain vote, within the bounds programmed into the contract.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"Bonding-curve pricing.", d:"Every trade executes at its own curve price. The curve does not guarantee a price floor; the price can fall during sell waves.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"A documented smart-contract system.", d:"Supporting contracts around the core contract — the full list with addresses is in the Contracts section below.", proof:"#contracts"},
+      {t:"Non-transferable loyalty badges.", d:"Standing earned by holding: badges grow with your balance and holding time, and cannot be sent to another address.", proof:"https://basescan.org/address/0xCBFB07577508118864cBeF3f177C834fdc161e6E"},
+      {t:"Trading-fee distribution.", d:"Trading fees (1% on buys, 1.5% on sells) are distributed among stakers, the treasury, and buy-and-burn. <a href='docs.html#fees'>Fee schedule</a>.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
       {t:"A reserve funding future sales.", d:"Today's purchases flow into a dedicated reserve that pays tomorrow's sellers. The reserve does not guarantee any specific sale price.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
-      {t:"A live on-chain danger reading.", d:"Twelve market and incident signals fuse into one public score — from calm to critical. Advisory only: it cannot halt trading or intervene.", proof:"https://basescan.org/address/0x3409accF2CA1E793D11EeF5D61bD33003691DAda"}
+      {t:"An advisory risk indicator.", d:"Market and incident signals fuse into one public indicator. Advisory only: it cannot halt trading or intervene.", proof:"https://basescan.org/address/0x3409accF2CA1E793D11EeF5D61bD33003691DAda"}
     ]
   },
   problems: {
-    title:"Problems EVA solves",
-    sub:"Why real tokens have collapsed — and how EVA's design addresses each cause.",
+    title:"Risks the design addresses",
+    sub:"Common risks in digital-asset projects — and how EVA's design addresses each.",
     items:[
-      {p:"Rug pulls (liquidity-draining scams)", s:"According to the published code — not yet independently audited — there are no hidden drain functions, and no party can drain the reserve."},
-      {p:"Liquidity pool drains", s:"Sales are paid from a dedicated reserve, not a shared pool — every seller exits at their own curve price, in order."},
+      {p:"Rug pulls (liquidity-draining scams)", s:"According to the published code — not yet independently audited — the published contracts include no function for draining the reserve, per our internal review."},
+      {p:"Liquidity pool drains", s:"Sales are paid from a dedicated reserve, not a shared pool — every seller sells at their own curve price, in order."},
       {p:"Accelerating price crashes", s:"Curve-based selling and the self-funding reserve are designed to soften sell waves: each purchase deepens the reserve backing future sales."},
-      {p:"Large-holder manipulation", s:"Per-transaction caps, per-block trade limits, and an automatic circuit breaker (triggered by the contract itself on sharp drops, with no human involved) limit how far any single actor can move the market at once."},
+      {p:"Large-holder manipulation", s:"Per-transaction caps, per-block trade limits, and an automatic circuit breaker documented in the core contract reduce the impact of large trades."},
       {p:"Hacks with no response", s:"The monitoring system logs every reported incident on-chain and publishes its defense assessment; countermeasures beyond pre-authorized bounds require a governance vote."}
     ]
   },
@@ -49,13 +49,13 @@ en: {
     title:"Monitoring & Alert System",
     sub:"Two independent smart contracts support the EVA core. They cannot access funds or change parameters — they monitor, record, and alert.",
     registry:{t:"Incident Registry", d:"A permanent on-chain record of every reported incident — hacks, anomalies, market shocks — each with a severity rating. It limits repeated reports, with priority handling for critical ones."},
-    defense:{t:"Adaptive Defense", d:"Reads the incident log and live market signals (volatility, depth, time-weighted average price) and computes a defense level from 0 to 3. The published level rises immediately under genuine pressure and falls after sustained calm. Incidents alone cannot trigger escalation without market corroboration."},
+    defense:{t:"Adaptive Defense", d:"Reads the incident log and live market signals (volatility, depth, time-weighted average price) and computes a published defense level. The published level rises immediately under genuine pressure and falls after sustained calm. Incidents alone cannot trigger escalation without market corroboration."},
     note:"It monitors and alerts only — it takes no action: responses are decided by governance vote. It cannot halt trading, move funds, or modify parameters."
   },
   tokenomics: {
     title:"Tokenomics",
-    supply:"21,000,000 EVA — the hard cap is fixed in the contract and can never rise.",
-    founder:"Vesting schedule: 500,000 liquid at launch + 2,000,000 over 3 years with a 1-year cliff + 500,000 over 1 year with no cliff.",
+    supply:"21,000,000 EVA — the hard cap is fixed in the contract and cannot be raised under the contract code.",
+    founder:"The founder's total share is 14.3%, subject to vesting schedules. <a href='docs.html#vesting'>Details</a>.",
     rows:[
       ["Bonding curve", "9,870,000", "47%"],
       ["Founder (500K liquid + 2.5M vested)", "3,000,000", "14.3%"],
@@ -65,11 +65,13 @@ en: {
       ["Treasury", "1,250,000", "6%"],
       ["Ecosystem", "1,000,000", "4.7%"]
     ],
-    taxes:"Current trading fees: 1% on buys · 1.5% on sells — split 50% to stakers, 30% to the treasury, 20% to buy-and-burn."
+    taxes:"Trading fees: 1% on buys · 1.5% on sells. <a href='docs.html#fees'>Fee schedule</a>.",
+    migration:"\u201cMigration\u201d refers to holders of the previous AVA coin, under the migration mechanism in the contract."
   },
   trade: {
-    title:"Trade EVA",
-    sub:"Trade directly with the bonding curve. You sign every transaction in your own wallet — this site never accesses your private keys.",
+    title:"Trading interface",
+    titleOff:"Trading interface (currently unavailable)",
+    sub:"You sign every transaction from your own wallet — the site never asks for your private keys and never stores them.",
     buyTab:"Buy", sellTab:"Sell",
     youPay:"You pay", youReceive:"You receive (estimate)",
     evaPay:"You pay", ethReceive:"You receive (estimate)",
@@ -77,7 +79,7 @@ en: {
     balance:"Balance", max:"Max",
     approveNote:"One-tap sell — no separate approval transaction needed.",
     buyBtn:"Buy EVA", sellBtn:"Sell EVA",
-    notLive:"Could not reach the Base network — check your connection.",
+    notLive:"Network data is currently unavailable.",
     comingSoon:"Trading opens soon.",
     txSent:"Transaction sent", txConfirmed:"Confirmed", txFailed:"Transaction failed",
     disclaimer:"Trading crypto is risky. Prices can go down. Only trade what you can afford to lose.",
@@ -92,12 +94,12 @@ en: {
     rows:[
       ["EVA Core Token", "0x0A834888B15d249f55498Dd16ac8a64B8c258396"],
       ["Founder Vesting", "0x5247Ca840cc570daAd69a02Aeb90C011Ab1D1A43"],
-      ["Engine Hub H2 (engine registry)", "0x57025c9B3d2E691422EE9026f7eb2B582A2e0b51"],
+      ["Detection-engine registry (H2)", "0x57025c9B3d2E691422EE9026f7eb2B582A2e0b51"],
       ["Incident Registry", "0x51a8c2205e51900Df394f85184a2A4E0A36EF0cc"],
       ["Adaptive Defense", "0xe51e89D9E81F775F694C852be01B2b9d41c82158"],
       ["Multisig Wallet", "0x9B66852aD70bB2A9F5c24B85121B4d92e735FcD3"],
       ["EVA Treasury", "0xf4F33F0E9Bde1F52Fb365b48b32A230cAe1CaF72"],
-      ["Bounded Governance", "0xA91beA308d3Af1C39198381Bc49138579b8eB5cB"],
+      ["Governance unit (limited scope)", "0xA91beA308d3Af1C39198381Bc49138579b8eB5cB"],
       ["Payment Splitter", "0xBa87A5F96D9363AC4A5c53178bfA2c11591c6B4A"],
       ["Keeper Scheduler", "0x278AeA29E5bDEDEB1Ecb6Ff019635260c3dEdC16"],
       ["Danger Score", "0x3409accF2CA1E793D11EeF5D61bD33003691DAda"],
@@ -108,23 +110,69 @@ en: {
       ["Conditional Escrow", "0x05f52c742B6cd0f2b063A244014d265FDdD81Ca4"],
       ["Payment Streams", "0x3FC58Dd718ffbE60b7AD8d92c91B90B1b370959f"],
       ["Subscriptions", "0xe31DF8fC121bdBEA96eD4FA48Ce10ce678b3dda6"],
-      ["Token Factory (create new tokens)", "0x830F2d58A5F4395A6d2464A878FBC45D8bA3aDda"],
+      ["Token creation tool, separate from EVA", "0x830F2d58A5F4395A6d2464A878FBC45D8bA3aDda"],
       ["Vesting Schedules", "0x699C3C8a59b28110BB27152D777B4e7b1CC11d76"]
     ],
     view:"View on BaseScan", copied:"Copied"
   },
   sound: { toggleOn:"Play ambient music", toggleOff:"Mute music" },
-  footer: { rights:"EVA — a token on Base. Open-source code.", risk:"Crypto assets are volatile. Do your own research before trading." }
+  footer: { rights:"EVA — a token on Base.", code:"Open-source code", risk:"Crypto assets are volatile. Do your own research before trading." },
+  docs: {
+    title:"Documentation",
+    sub:"Precise details behind the summary on the main page — with verification links.",
+    back:"Back to main page",
+    sections:[
+      {id:"fees", t:"Fee schedule", blocks:[
+        {p:"Trading fees in the core contract: 1% on buys (100 basis points) and 1.5% on sells (150 basis points)."},
+        {table:{head:["Destination","Share"], rows:[["Stakers","50%"],["Treasury","30%"],["Buy-and-burn","20%"]]}},
+        {p:"Fees can only change through a public governance vote, and only within immutable programmed bounds: buys between 0.5% and 5%, sells between 1% and 8%. The values above are the current ones."},
+        {p:"Engine signals are advisory: the engine hub may suggest values inside the same bounds; the core contract rejects anything outside them. The separate \u201cAdaptive Fee Engine V2\u201d contract is advisory only and does not control core fees."},
+        {proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"}
+      ]},
+      {id:"vesting", t:"Founder share & vesting", blocks:[
+        {p:"The founder's total share is 3,000,000 EVA (14.3% of the maximum supply)."},
+        {table:{head:["Tranche","Amount","Schedule"], rows:[["Liquid at launch","500,000","Available immediately"],["First tranche","2,000,000","Over 3 years with a 1-year initial lock (cliff)"],["Second tranche","500,000","Over 1 year, linear, no cliff"]]}},
+        {p:"Vested funds are managed by the vesting contract."},
+        {proof:"https://basescan.org/address/0x5247Ca840cc570daAd69a02Aeb90C011Ab1D1A43"}
+      ]},
+      {id:"governance", t:"Governance", blocks:[
+        {p:"Who votes: EVA holders. A proposal passes with a quorum of 4% of the votable supply (frozen when the proposal is created), followed by a timelock before execution."},
+        {p:"Scope: voting changes parameters only within immutable programmed bounds (fees, thresholds, the engine hub). Nothing outside those bounds can be changed by vote."},
+        {p:"Treasury: managed by a multisig wallet with a 1-of-1 threshold. The sole signer is currently the founder's address 0xE9B0CebeF9e93cAc7727A06D5ED5f8e3AE71e5F8. Any treasury spending requires that signature."},
+        {p:"Governance unit: a separate contract with programmed limited powers; it currently has no compatible targets in the live system."},
+        {proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"}
+      ]},
+      {id:"monitor", t:"Risk indicator & circuit breaker", blocks:[
+        {p:"The risk indicator fuses market signals (volatility, depth, time-weighted average price) with the incident registry into one public on-chain indicator. It is advisory only."},
+        {p:"Numerical detail: 12 signals on a scale from 0 (calm) to 3 (critical)."},
+        {p:"Circuit breaker: an automatic mechanism in the core contract \u2014 if the time-weighted average price falls more than 40% below its hourly reference, trading halts for 24 hours. No one can trigger it manually; the reference resets every hour."},
+        {proof:"https://basescan.org/address/0x3409accF2CA1E793D11EeF5D61bD33003691DAda"}
+      ]},
+      {id:"migration", t:"Migration reserve", blocks:[
+        {p:"\u201cMigration\u201d refers to holders of the previous AVA coin. 2,100,000 EVA (10%) is reserved for their migration under the migration mechanism in the core contract."},
+        {proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"}
+      ]},
+      {id:"contracts", t:"Contracts & verification", blocks:[
+        {p:"Every contract below is deployed on Base and verifiable on BaseScan."},
+        {contracts:true},
+        {note:"The contracts have not undergone an independent external audit yet."}
+      ]},
+      {id:"audit", t:"Audit status & risks", blocks:[
+        {p:"No independent external security audit has been completed. Internal reviews were performed, including automated scanning (Slither), multiple reviewer passes, and 342 passing automated tests for the satellite suite."},
+        {p:"Crypto assets are volatile and prices can fall. This content is for informational purposes only \u2014 not financial advice. Do your own research before trading."}
+      ]}
+    ]
+  }
 },
 ar: {
   dir: "rtl", langName: "English",
-  nav: { about:"عن العملة", benefits:"لماذا EVA", problems:"التحديات المحلولة", immune:"الرصد والإنذار", tokenomics:"الاقتصاد الرمزي", trade:"التداول", contracts:"العقود" },
+  nav: { about:"عن العملة", benefits:"لماذا EVA", problems:"المخاطر", immune:"الرصد والإنذار", tokenomics:"الاقتصاد الرمزي", trade:"التداول", contracts:"العقود", docs:"التوثيق" },
   wallet: { connect:"ربط المحفظة", connected:"متصلة", wrongNetwork:"التبديل إلى شبكة Base", disconnect:"قطع الاتصال" },
   hero: {
     badge:"عملة رقمية على شبكة Base",
     title:"EVA",
-    tagline:"21 مليون عملة ثابتة. بلا صلاحيات إدارية فردية.",
-    sub:"يُحدَّد السعر عبر منحنى الربط على شبكة Base — بلا مجمع سيولة يمكن استنزافه.",
+    tagline:"سقف أقصى 21 مليون عملة. الصلاحيات غير متركزة في جهة واحدة.",
+    sub:"يُحدَّد السعر عبر منحنى الربط على شبكة Base.",
     ctaBuy:"التداول قريبًا", ctaLearn:"اعرف المزيد",
     price:"السعر", perEva:"لكل EVA",
     risk:"المحتوى لأغراض معلوماتية وليس نصيحة مالية. لم تخضع العقود لتدقيق خارجي مستقل بعد."
@@ -133,31 +181,31 @@ ar: {
   stats: { price:"السعر", mcap:"القيمة السوقية", supply:"المعروض المتداول", reserve:"الاحتياطي" },
   about: {
     title:"ما هي EVA؟",
-    p1:"EVA عملة رقمية على شبكة Base بسقف أقصى 21,000,000 عملة — مكتوب في العقد الذكي، ولا يرتفع أبدًا.",
-    p2:"يُحدَّد سعرها عبر منحنى الربط (Bonding Curve) لا عبر مجمع سيولة: لا يوجد مجمع مشترك يمكن استنزافه، وكل عملية شراء تموّل الاحتياطي الذي يدفع المبيعات اللاحقة. أي تغيير يجب أن يعبر تصويتًا علنيًا على البلوكتشين. وحول العقد الأساسي، تم نشر 15 عقدًا ذكيًا على Base: شارات ولاء غير قابلة للتحويل، وأتمتة مفتوحة للجميع، ودرجة خطر حيّة، وخزانة متعددة التوقيعات، ومدفوعات متدفقة، وجداول استحقاق، واشتراكات، وضمان مشروط، وموزّع مكافآت، ومصنع عملات."
+    p1:"EVA عملة رقمية على شبكة Base بسقف أقصى 21,000,000 عملة — مكتوب في العقد الذكي، ولا يمكن رفعه وفق كود العقد.",
+    p2:"يُحدَّد سعرها عبر منحنى الربط (Bonding Curve): كل صفقة تُنفَّذ بسعرها الخاص على المنحنى. أي تغيير في العقد الأساسي يجب أن يعبر تصويتًا علنيًا لحاملي العملة. وتدعمها منظومة عقود ذكية موثّقة — القائمة الكاملة بالعناوين في قسم العقود أدناه."
   },
   benefits: {
     title:"لماذا EVA؟",
     verify:"تحقق على BaseScan",
     items:[
-      {t:"السقف الأقصى: 21,000,000 عملة.", d:"السقف محدد في العقد الذكي ولا يرتفع أبدًا؛ وعمليات الحرق تخفض المعروض المتداول. لا يمكن سكّ عملات جديدة تحت أي ظرف.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
-      {t:"بلا صلاحيات إدارية فردية.", d:"لا توجد صلاحية تحكم مركزية — أي تغيير يمر عبر تصويت علني على البلوكتشين، ضمن الحدود المبرمجة في العقد.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
-      {t:"التسعير عبر منحنى الربط.", d:"كل صفقة تُنفَّذ بسعرها الخاص على المنحنى — بلا مجمع سيولة مشترك. المنحنى لا يضمن حدًا أدنى للسعر؛ فقد يهبط مع موجات البيع.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
-      {t:"15 عقدًا ذكيًا على Base.", d:"منظومة عاملة حول العقد الأساسي — القائمة الكاملة بالعناوين في قسم العقود أدناه.", proof:"#contracts"},
-      {t:"شارات ولاء غير قابلة للتحويل.", d:"مكانة تُكتسب بالاحتفاظ: تنمو الشارات مع الرصيد ومدة الاحتفاظ، ولا يمكن إرسالها إلى عنوان آخر. الشارات لا تحمل قيمة مالية ولا تُستخدم كضمان.", proof:"https://basescan.org/address/0xCBFB07577508118864cBeF3f177C834fdc161e6E"},
-      {t:"إعادة شراء وحرق تلقائية.", d:"تُوزَّع رسوم التداول (1% على الشراء و1.5% على البيع): 50% للمخزِّنين، و30% للخزانة، و20% لإعادة الشراء والحرق. التنفيذ مرتبط بتحقق عتبات النشاط.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"السقف الأقصى: 21,000,000 عملة.", d:"السقف محدد في العقد الذكي ولا يمكن رفعه وفق كود العقد؛ وعمليات الحرق تخفض المعروض المتداول.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"الصلاحيات غير متركزة في جهة واحدة.", d:"لا توجد صلاحية تحكم مركزية — أي تغيير يمر عبر تصويت علني على البلوكتشين، ضمن الحدود المبرمجة في العقد.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"التسعير عبر منحنى الربط.", d:"كل صفقة تُنفَّذ بسعرها الخاص على المنحنى. المنحنى لا يضمن حدًا أدنى للسعر؛ فقد يهبط مع موجات البيع.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
+      {t:"منظومة عقود ذكية موثّقة.", d:"عقود مساندة حول العقد الأساسي — القائمة الكاملة بالعناوين في قسم العقود أدناه.", proof:"#contracts"},
+      {t:"شارات ولاء غير قابلة للتحويل.", d:"مكانة تُكتسب بالاحتفاظ: تنمو الشارات مع الرصيد ومدة الاحتفاظ، ولا يمكن إرسالها إلى عنوان آخر.", proof:"https://basescan.org/address/0xCBFB07577508118864cBeF3f177C834fdc161e6E"},
+      {t:"توزيع رسوم التداول.", d:"تُوزَّع رسوم التداول (1% على الشراء و1.5% على البيع) بين المخزِّنين والخزانة وإعادة الشراء والحرق. <a href='docs.html#fees'>جدول الرسوم</a>.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
       {t:"احتياطي يموّل المبيعات اللاحقة.", d:"تتدفق مشتريات اليوم إلى احتياطي مخصص يدفع مبيعات الغد. الاحتياطي لا يضمن سعر بيع محددًا.", proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"},
-      {t:"قراءة خطر حيّة على البلوكتشين.", d:"تندمج 12 إشارة من السوق والحوادث في درجة واحدة منشورة للجميع — من الهدوء إلى الحرج. استشارية فقط: لا توقف التداول ولا تتدخل فيه.", proof:"https://basescan.org/address/0x3409accF2CA1E793D11EeF5D61bD33003691DAda"}
+      {t:"مؤشر مخاطر استشاري.", d:"تندمج إشارات السوق والحوادث في مؤشر واحد منشور للجميع. استشاري فقط: لا يوقف التداول ولا يتدخل فيه.", proof:"https://basescan.org/address/0x3409accF2CA1E793D11EeF5D61bD33003691DAda"}
     ]
   },
   problems: {
-    title:"تحديات تعالجها EVA",
-    sub:"أسباب انهيار عملات حقيقية — وكيف يتعامل معها تصميم EVA.",
+    title:"مخاطر يتناولها التصميم",
+    sub:"مخاطر شائعة في المشاريع الرقمية — وكيف يتناولها تصميم EVA.",
     items:[
-      {p:"الاحتيال بسحب السيولة (Rug Pull)", s:"وفق الكود المنشور — الذي لم يخضع لتدقيق خارجي مستقل بعد — لا توجد دوال خفية لسحب الأموال، ولا تملك أي جهة صلاحية استنزاف الاحتياطي."},
-      {p:"استنزاف مجمعات السيولة", s:"تُدفع عمليات البيع من احتياطي مخصص لا من مجمع مشترك — كل بائع يخرج بسعره الخاص على المنحنى بحسب الترتيب."},
+      {p:"الاحتيال بسحب السيولة (Rug Pull)", s:"وفق الكود المنشور — الذي لم يخضع لتدقيق خارجي مستقل بعد — لا تتضمن العقود المنشورة دالة لسحب الاحتياطي بحسب المراجعة الداخلية."},
+      {p:"استنزاف مجمعات السيولة", s:"تُدفع عمليات البيع من احتياطي مخصص لا من مجمع مشترك — كل بائع يبيع بسعره الخاص على المنحنى بحسب الترتيب."},
       {p:"الهبوط السعري المتسارع", s:"البيع على المنحنى والاحتياطي ذاتي التمويل مصممان للتخفيف من حدّة موجات البيع: كل عملية شراء تعمّق الاحتياطي الداعم للمبيعات اللاحقة."},
-      {p:"تلاعب كبار الحائزين", s:"حد أقصى لكل معاملة، ومعاملة واحدة في الكتلة، وقاطع طوارئ تلقائي (يُفعَّل ذاتيًا عند الهبوط الحاد دون تدخل بشري) يحدّ من قدرة أي طرف على تحريك السوق دفعة واحدة."},
+      {p:"تلاعب كبار الحائزين", s:"حد أقصى لكل معاملة، ومعاملة واحدة في الكتلة، وقاطع طوارئ تلقائي موثّق في العقد الأساسي يقلّل أثر الصفقات الكبيرة."},
       {p:"اختراقات بلا استجابة", s:"يسجّل نظام الرصد كل حادثة مُبلَّغ عنها على البلوكتشين وينشر تقييمه الدفاعي؛ والإجراءات التي تتجاوز الحدود المعتمدة تتطلب تصويت الحوكمة."}
     ]
   },
@@ -165,27 +213,29 @@ ar: {
     title:"نظام الرصد والإنذار",
     sub:"عقدان ذكيان مستقلان يدعمان العقد الأساسي لـEVA؛ لا يمسان الأموال ولا يغيّران الإعدادات — يرصدان ويسجّلان وينبّهان.",
     registry:{t:"سجل الحوادث", d:"سجل دائم على البلوكتشين لكل حادثة مُبلَّغ عنها — اختراقات وحالات شاذة وصدمات سوقية — مصنّف ومقيَّم الخطورة، ويحدّ من البلاغات المتكررة مع مسارات طوارئ للبلاغات الحرجة."},
-    defense:{t:"الدفاع التكيّفي", d:"يقرأ سجل الحوادث وإشارات السوق المباشرة (التقلب والعمق ومتوسط السعر) ويحتسب مستوى دفاع من 0 إلى 3. يرتفع المستوى المعلن فورًا مع الضغط الحقيقي، وينخفض بعد استقرار متواصل. لا يمكن للحوادث وحدها رفع المستوى دون تأكيد من السوق."},
+    defense:{t:"الدفاع التكيّفي", d:"يقرأ سجل الحوادث وإشارات السوق المباشرة (التقلب والعمق ومتوسط السعر) ويحتسب مستوى دفاع معلنًا. يرتفع المستوى المعلن فورًا مع الضغط الحقيقي، وينخفض بعد استقرار متواصل. لا يمكن للحوادث وحدها رفع المستوى دون تأكيد من السوق."},
     note:"يرصد وينبّه فقط، ولا ينفذ إجراءات: يُبت في الاستجابة عبر تصويت الحوكمة. لا يمكنه إيقاف التداول أو تحريك الأموال أو تعديل الإعدادات."
   },
   tokenomics: {
     title:"الاقتصاد الرمزي",
-    supply:"21,000,000 EVA — السقف الأقصى ثابت في العقد ولا يرتفع أبدًا.",
-    founder:"جدول الاستحقاق: 500,000 سائلة عند الإطلاق + 2,000,000 على 3 سنوات بمنحدر سنة + 500,000 على سنة بدون منحدر.",
+    supply:"21,000,000 EVA — السقف الأقصى ثابت في العقد ولا يمكن رفعه وفق كود العقد.",
+    founder:"إجمالي حصة المؤسس 14.3% وتخضع لجداول استحقاق. <a href='docs.html#vesting'>التفاصيل</a>.",
     rows:[
       ["منحنى الربط", "9,870,000", "47%"],
       ["المؤسس (500 ألف سائل + 2.5 مليون باستحقاق)", "3,000,000", "14.3%"],
-      ["مكافآت التخزين (4 سنوات)", "2,100,000", "10%"],
-      ["احتياطي ترحيل حاملي AVA", "2,100,000", "10%"],
+      ["انبعاثات التخزين (4 سنوات)", "2,100,000", "10%"],
+      ["احتياطي الترحيل", "2,100,000", "10%"],
       ["التوزيع المجاني (Airdrop)", "1,680,000", "8%"],
       ["الخزانة", "1,250,000", "6%"],
       ["النظام البيئي", "1,000,000", "4.7%"]
     ],
-    taxes:"رسوم التداول الحالية: 1% على الشراء و1.5% على البيع — تُوزَّع: 50% للمخزِّنين، و30% للخزانة، و20% لإعادة الشراء والحرق."
+    taxes:"رسوم التداول: 1% على الشراء و1.5% على البيع. <a href='docs.html#fees'>جدول الرسوم</a>.",
+    migration:"«الترحيل» يشير إلى حاملي عملة AVA السابقة، وفق آلية الترحيل في العقد."
   },
   trade: {
-    title:"تداول EVA",
-    sub:"تداول مباشر مع منحنى السعر. أنت من يوقّع كل معاملة من محفظتك — الموقع لا يمسُّ مفاتيحك الخاصة أبدًا.",
+    title:"واجهة التداول",
+    titleOff:"واجهة التداول (غير متاحة حاليًا)",
+    sub:"أنت من يوقّع كل معاملة من محفظتك — لا يطلب الموقع مفاتيحك الخاصة ولا يخزّنها.",
     buyTab:"شراء", sellTab:"بيع",
     youPay:"تدفع", youReceive:"تستلم (تقديري)",
     evaPay:"تدفع", ethReceive:"تستلم (تقديري)",
@@ -193,7 +243,7 @@ ar: {
     balance:"الرصيد", max:"الحد الأقصى",
     approveNote:"بيع بنقرة واحدة — لا حاجة لمعاملة موافقة منفصلة.",
     buyBtn:"شراء EVA", sellBtn:"بيع EVA",
-    notLive:"تعذّر الاتصال بشبكة Base — تحقق من اتصالك بالإنترنت.",
+    notLive:"بيانات الشبكة غير متاحة حاليًا.",
     comingSoon:"التداول سيُفتتح قريبًا.",
     txSent:"تم إرسال المعاملة", txConfirmed:"تم التأكيد", txFailed:"فشلت المعاملة",
     disclaimer:"تداول العملات الرقمية محفوف بالمخاطر. قد تنخفض الأسعار. لا تتداول إلا بما يمكنك تحمّل خسارته.",
@@ -208,15 +258,15 @@ ar: {
     rows:[
       ["عملة EVA الأساسية", "0x0A834888B15d249f55498Dd16ac8a64B8c258396"],
       ["استحقاق المؤسس", "0x5247Ca840cc570daAd69a02Aeb90C011Ab1D1A43"],
-      ["مركز المحركات H2 (سجل المحركات)", "0x57025c9B3d2E691422EE9026f7eb2B582A2e0b51"],
+      ["سجل محركات الرصد (H2)", "0x57025c9B3d2E691422EE9026f7eb2B582A2e0b51"],
       ["سجل الحوادث", "0x51a8c2205e51900Df394f85184a2A4E0A36EF0cc"],
       ["الدفاع التكيّفي", "0xe51e89D9E81F775F694C852be01B2b9d41c82158"],
       ["المحفظة متعددة التوقيعات", "0x9B66852aD70bB2A9F5c24B85121B4d92e735FcD3"],
       ["خزانة EVA", "0xf4F33F0E9Bde1F52Fb365b48b32A230cAe1CaF72"],
-      ["الحوكمة المقيّدة", "0xA91beA308d3Af1C39198381Bc49138579b8eB5cB"],
+      ["وحدة الحوكمة (نطاق محدود)", "0xA91beA308d3Af1C39198381Bc49138579b8eB5cB"],
       ["موزّع المدفوعات", "0xBa87A5F96D9363AC4A5c53178bfA2c11591c6B4A"],
       ["مجدول الأتمتة", "0x278AeA29E5bDEDEB1Ecb6Ff019635260c3dEdC16"],
-      ["درجة الخطر", "0x3409accF2CA1E793D11EeF5D61bD33003691DAda"],
+      ["مؤشر المخاطر", "0x3409accF2CA1E793D11EeF5D61bD33003691DAda"],
       ["محرك الرسوم التكيفي", "0x504c162Aa48C21122371246Cdfd0C48ab22F8082"],
       ["شارة الولاء", "0xCBFB07577508118864cBeF3f177C834fdc161e6E"],
       ["موزّع المكافآت", "0x4Fea207a3d52Ae883993a45E87883311827388Db"],
@@ -224,12 +274,58 @@ ar: {
       ["الضمان المشروط", "0x05f52c742B6cd0f2b063A244014d265FDdD81Ca4"],
       ["المدفوعات المتدفقة", "0x3FC58Dd718ffbE60b7AD8d92c91B90B1b370959f"],
       ["الاشتراكات", "0xe31DF8fC121bdBEA96eD4FA48Ce10ce678b3dda6"],
-      ["مصنع العملات (إنشاء عملات جديدة)", "0x830F2d58A5F4395A6d2464A878FBC45D8bA3aDda"],
+      ["أداة إنشاء رموز منفصلة عن EVA", "0x830F2d58A5F4395A6d2464A878FBC45D8bA3aDda"],
       ["جداول الاستحقاق", "0x699C3C8a59b28110BB27152D777B4e7b1CC11d76"]
     ],
     view:"عرض على BaseScan", copied:"تم النسخ"
   },
   sound: { toggleOn:"تشغيل الموسيقى الهادئة", toggleOff:"كتم الموسيقى" },
-  footer: { rights:"EVA — عملة رقمية على Base. الكود مفتوح المصدر.", risk:"العملات الرقمية متقلبة. أجرِ أبحاثك بنفسك قبل التداول." }
+  footer: { rights:"EVA — عملة رقمية على Base.", code:"الكود مفتوح المصدر", risk:"العملات الرقمية متقلبة. أجرِ أبحاثك بنفسك قبل التداول." },
+  docs: {
+    title:"التوثيق",
+    sub:"التفاصيل الدقيقة وراء الملخص في الصفحة الرئيسية — مع روابط التحقق.",
+    back:"عودة إلى الصفحة الرئيسية",
+    sections:[
+      {id:"fees", t:"جدول الرسوم", blocks:[
+        {p:"رسوم التداول في العقد الأساسي: 1% على الشراء (100 نقطة أساس) و1.5% على البيع (150 نقطة أساس)."},
+        {table:{head:["الوجهة","النسبة"], rows:[["المخزِّنون","50%"],["الخزانة","30%"],["إعادة الشراء والحرق","20%"]]}},
+        {p:"لا يمكن تغيير الرسوم إلا عبر تصويت حوكمة علني، وضمن حدود ثابتة مبرمجة: الشراء بين 0.5% و5%، والبيع بين 1% و8%. القيم أعلاه هي القيم الحالية."},
+        {p:"إشارات المحركات استشارية: قد يقترح مركز المحركات قيمًا ضمن الحدود نفسها، ويرفض العقد الأساسي أي قيمة خارجها. وعقد \u00abمحرك الرسوم التكيفي\u00bb المنفصل استشاري فقط ولا يتحكم في رسوم العقد الأساسي."},
+        {proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"}
+      ]},
+      {id:"vesting", t:"حصة المؤسس والاستحقاق", blocks:[
+        {p:"إجمالي حصة المؤسس 3,000,000 عملة (14.3% من الحد الأقصى للمعروض)."},
+        {table:{head:["الشريحة","المقدار","الجدول"], rows:[["سائلة عند الإطلاق","500,000","متاحة فورًا"],["الشريحة الأولى","2,000,000","على 3 سنوات مع فترة قفل أولية سنة"],["الشريحة الثانية","500,000","على سنة واحدة بدون فترة قفل"]]}},
+        {p:"تُدار الأموال الخاضعة للاستحقاق عبر عقد الاستحقاق."},
+        {proof:"https://basescan.org/address/0x5247Ca840cc570daAd69a02Aeb90C011Ab1D1A43"}
+      ]},
+      {id:"governance", t:"الحوكمة", blocks:[
+        {p:"من يصوّت: حاملو عملة EVA. يُقر الاقتراح بنصاب 4% من المعروض القابل للتصويت (يُجمَّد عند إنشاء الاقتراح)، تليه مهلة زمنية قبل التنفيذ."},
+        {p:"النطاق: يغيّر التصويت المعاملات ضمن حدود ثابتة مبرمجة فقط (الرسوم، العتبات، مركز المحركات). لا يمكن تغيير أي شيء خارج تلك الحدود بالتصويت."},
+        {p:"الخزانة: تُدار عبر محفظة متعددة التوقيعات بعتبة 1 من 1. الموقّع الوحيد حاليًا هو عنوان المؤسس 0xE9B0CebeF9e93cAc7727A06D5ED5f8e3AE71e5F8. أي صرف من الخزانة يتطلب توقيعه."},
+        {p:"وحدة الحوكمة: عقد منفصل بصلاحيات محدودة مبرمجة؛ ولا يملك حاليًا أهدافًا متوافقة في المنظومة الحية."},
+        {proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"}
+      ]},
+      {id:"monitor", t:"مؤشر المخاطر وقاطع الطوارئ", blocks:[
+        {p:"يجمع مؤشر المخاطر إشارات السوق (التقلب والعمق ومتوسط السعر المرجح زمنيًا) مع سجل الحوادث في مؤشر واحد منشور على البلوكتشين. وهو استشاري فقط."},
+        {p:"التفاصيل العددية: 12 إشارة على مقياس من 0 (هدوء) إلى 3 (حرج)."},
+        {p:"قاطع الطوارئ: آلية تلقائية في العقد الأساسي \u2014 إذا هبط متوسط السعر المرجح زمنيًا بأكثر من 40% عن القيمة المرجعية خلال ساعة، يتوقف التداول 24 ساعة. لا يملك أي شخص تفعيله يدويًا؛ وتُعاد ضبط القيمة المرجعية كل ساعة."},
+        {proof:"https://basescan.org/address/0x3409accF2CA1E793D11EeF5D61bD33003691DAda"}
+      ]},
+      {id:"migration", t:"احتياطي الترحيل", blocks:[
+        {p:"\u00abالترحيل\u00bb يشير إلى حاملي عملة AVA السابقة. خُصص 2,100,000 عملة (10%) لترحيلهم وفق آلية الترحيل في العقد الأساسي."},
+        {proof:"https://basescan.org/address/0x0A834888B15d249f55498Dd16ac8a64B8c258396"}
+      ]},
+      {id:"contracts", t:"العقود والتحقق", blocks:[
+        {p:"كل عقد أدناه منشور على شبكة Base ويمكن التحقق منه على BaseScan."},
+        {contracts:true},
+        {note:"لم تخضع العقود لتدقيق خارجي مستقل بعد."}
+      ]},
+      {id:"audit", t:"حالة التدقيق والمخاطر", blocks:[
+        {p:"لم يكتمل أي تدقيق أمني خارجي مستقل. أُجريت مراجعات داخلية شملت فحصًا آليًا (Slither) ومراجعات متعددة و342 اختبارًا آليًا ناجحًا لحزمة العقود المساندة."},
+        {p:"العملات الرقمية متقلبة وقد تنخفض أسعارها. المحتوى لأغراض معلوماتية وليس نصيحة مالية. أجرِ أبحاثك بنفسك قبل التداول."}
+      ]}
+    ]
+  }
 }
 };
