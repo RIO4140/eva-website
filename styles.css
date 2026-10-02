@@ -301,5 +301,7 @@ footer{border-top:1px solid var(--stroke);padding:44px 20px 54px;background:rgba
 .migration-line{text-align:center;color:var(--muted);font-size:.82rem;margin:14px 0 4px;opacity:.85}
 .footer-code{color:var(--cyan);text-decoration:none;border-bottom:1px dotted var(--cyan)}
 .footer-code:hover{color:#fff;border-bottom-color:#fff}
+.cta-disabled{opacity:.55;cursor:not-allowed;filter:saturate(.6)}
+.cta-disabled:hover{transform:none!important;box-shadow:0 8px 30px rgba(0,165,255,.25)!important}
 .proof-link{display:inline-block;margin-top:10px;font-size:.8rem;color:var(--cyan);text-decoration:none;border-bottom:1px dotted var(--cyan)}
 .proof-link:hover{color:#fff;border-bottom-color:#fff}
