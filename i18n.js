@@ -21,12 +21,15 @@ en: {
   benefits: {
     title:"Why EVA?",
     items:[
-      {t:"No admin keys", d:"Control is only possible through on-chain governance."},
-      {t:"No pool to drain", d:"Price comes from the bonding curve, not a shared pool."},
-      {t:"Self-funding", d:"Purchases fund the reserve that pays future sales."},
-      {t:"Buy-and-burn", d:"Trading taxes buy back and burn EVA once activity thresholds are met."},
-      {t:"Staking rewards", d:"Earn yield by locking EVA — up to 4× for long-term locks."},
-      {t:"On-chain immune system", d:"Monitors threats and publishes its assessment."}
+      {t:"No one holds the master key.", d:"There are no admin keys. The only way to change anything is a public on-chain vote."},
+      {t:"There is nothing to drain.", d:"Price comes from a bonding curve, not a shared pool. No vault, no target."},
+      {t:"Every buyer funds the sellers of tomorrow.", d:"Purchases flow into a reserve that pays future sales. The protocol feeds itself."},
+      {t:"It buys its own dips.", d:"Trading taxes automatically buy back and burn EVA once activity thresholds are met."},
+      {t:"Patience is recognized.", d:"Lock EVA and your conviction is measured in tiers — up to 4× weight for the longest locks."},
+      {t:"It watches itself.", d:"An on-chain immune system monitors incidents and market pressure around the clock, and publishes its assessment for everyone to see."},
+      {t:"Loyalty you cannot sell.", d:"Soulbound badges grow with your balance and holding time — standing that can't be bought or transferred, only earned."},
+      {t:"Twelve signals, one verdict.", d:"A live danger score fuses a dozen market and incident indicators into a single on-chain reading — from calm to critical."},
+      {t:"Clockwork without a keeper.", d:"Permissionless automation for the protocol's recurring tasks — no operator, no permission required."}
     ]
   },
   problems: {
@@ -115,12 +118,15 @@ ar: {
   benefits: {
     title:"لماذا EVA؟",
     items:[
-      {t:"بلا مفاتيح تحكم", d:"التحكم ممكن فقط عبر حوكمة البلوكتشين."},
-      {t:"بلا مجمع قابل للاستنزاف", d:"السعر من المنحنى الرياضي لا من مجمع مشترك."},
-      {t:"تمويل ذاتي", d:"المشتريات تموّل الاحتياطي الذي يدفع المبيعات اللاحقة."},
-      {t:"الشراء والحرق", d:"ضرائب التداول تشتري EVA وتحرقها عند تحقق عتبات النشاط."},
-      {t:"مكافآت التخزين", d:"عائد مقابل تجميد العملة — حتى 4 أضعاف لفترات التجميد الطويلة."},
-      {t:"مناعة على البلوكتشين", d:"يرصد التهديدات وينشر تقييمه."}
+      {t:"لا يملك أحد المفتاح الرئيسي.", d:"لا توجد مفاتيح تحكم؛ السبيل الوحيد لأي تغيير تصويتٌ علني على البلوكتشين."},
+      {t:"لا يوجد ما يُستنزَف.", d:"السعر من المنحنى الرياضي لا من مجمع مشترك — بلا خزنة، بلا هدف."},
+      {t:"كل مشترٍ يموّل بائعي الغد.", d:"تتدفق المشتريات إلى احتياطي يدفع المبيعات اللاحقة — البروتوكول يُطعِم نفسه."},
+      {t:"تشتري انخفاضاتها بنفسها.", d:"ضرائب التداول تشتري EVA وتحرقها تلقائيًا عند تحقق عتبات النشاط."},
+      {t:"الصبر يُقدَّر.", d:"جمّد عملاتك وسيُقاس ولاؤك بدرجات — حتى 4 أضعاف لأطول فترات التجميد."},
+      {t:"تراقب نفسها.", d:"نظام مناعة على البلوكتشين يرصد الحوادث وضغوط السوق على مدار الساعة، وينشر تقييمه ليراه الجميع."},
+      {t:"ولاءٌ لا يُباع.", d:"شارات ملازمة للروح تنمو مع رصيدك ومدة احتفاظك — مكانة لا تُشترى ولا تُنقَل، بل تُستحَق."},
+      {t:"اثنتا عشرة إشارة وحكمٌ واحد.", d:"درجة خطر حيّة تدمج عشرات مؤشرات السوق والحوادث في قراءة واحدة على البلوكتشين — من الهدوء إلى الحرج."},
+      {t:"آلية دقيقة بلا قيّم.", d:"أتمتة بلا إذن لمهام البروتوكول الدورية — بلا مشغّل وبلا حاجة إلى إذن."}
     ]
   },
   problems: {
