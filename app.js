@@ -406,7 +406,7 @@ async function doBuy() {
   let val;
   try { val = ethers.parseEther(inp); } catch { return; }
   if (val <= 0n) return;
-  txMsg("pending", t("trade.txSent") + "…");
+  txMsg("pending", t("trade.waitingWallet"));
   try {
     const [evaOut] = await coreRO().buyPreview(val);
     const minEvaOut = evaOut * 98n / 100n;
@@ -428,7 +428,7 @@ async function doSell() {
   let amt;
   try { amt = ethers.parseEther(inp); } catch { return; }
   if (amt <= 0n) return;
-  txMsg("pending", t("trade.txSent") + "…");
+  txMsg("pending", t("trade.waitingWallet"));
   try {
     const [ethOut] = await coreRO().sellPreview(amt);
     const minEthOut = ethOut * 98n / 100n;
