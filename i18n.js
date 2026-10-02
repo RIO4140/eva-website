@@ -7,7 +7,7 @@ en: {
   hero: {
     badge:"DeFi Token on Base",
     title:"EVA",
-    tagline:"21 million coins. Not a single admin key.",
+    tagline:"21 million coins. Fixed. No admin keys.",
     sub:"Priced by a bonding curve on Base — no liquidity pool to drain.",
     ctaBuy:"Buy EVA", ctaLearn:"Learn more",
     price:"Price", perEva:"per EVA"
@@ -103,7 +103,7 @@ ar: {
   hero: {
     badge:"عملة رقمية على شبكة Base",
     title:"EVA",
-    tagline:"21 مليون عملة. ولا مفتاح تحكم واحد.",
+    tagline:"21 مليون عملة ثابتة بلا مفاتيح تحكّم.",
     sub:"عملة يُحتسب سعرها وفق المنحنى الرياضي على شبكة Base — بلا مجمع سيولة يمكن استنزافه.",
     ctaBuy:"شراء EVA", ctaLearn:"اعرف المزيد",
     price:"السعر", perEva:"لكل EVA"
