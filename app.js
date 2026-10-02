@@ -196,6 +196,14 @@ function initNav() {
 /* ================= dApp ================= */
 const CORE = "0x0A834888B15d249f55498Dd16ac8a64B8c258396";
 const BASE_CHAIN_ID = 8453n;
+const RPCS = ["https://mainnet.base.org", "https://base.publicnode.com", "https://1rpc.io/base"];
+let rpcUrl = RPCS[0];
+async function pickRpc() {
+  for (const u of RPCS) {
+    try { await new ethers.JsonRpcProvider(u).getBlockNumber(); rpcUrl = u; return; }
+    catch {}
+  }
+}
 const RPC = "https://mainnet.base.org";
 const ABI = [
   "function buy(uint256 minEvaOut, uint256 deadline) payable returns (uint256)",
@@ -207,7 +215,7 @@ const ABI = [
   "function decimals() view returns (uint8)",
   "function balanceOf(address) view returns (uint256)"
 ];
-const roProvider = () => new ethers.JsonRpcProvider(RPC);
+const roProvider = () => new ethers.JsonRpcProvider(rpcUrl);
 const coreRO = () => new ethers.Contract(CORE, ABI, roProvider());
 let signer = null, coreSigner = null, account = null, chainOk = false, tradingLive = false;
 
@@ -467,8 +475,11 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#trade-notlive").classList.remove("hidden");
     refreshTradeButtons();
   } else {
-    refreshStats();
-    setInterval(refreshStats, 30000);
-    setInterval(() => { if (account && chainOk) refreshBalances(); }, 30000);
+    (async () => {
+      await pickRpc();
+      refreshStats();
+      setInterval(refreshStats, 30000);
+      setInterval(() => { if (account && chainOk) refreshBalances(); }, 30000);
+    })();
   }
 });
