@@ -297,3 +297,5 @@ footer{border-top:1px solid var(--stroke);padding:44px 20px 54px;background:rgba
 @media (max-width:640px){.sound-toggle{bottom:16px;inset-inline-end:16px;width:42px;height:42px}}
 .hero-risk{color:var(--muted);font-size:.8rem;margin-top:18px;max-width:560px;opacity:.85}
 .founder-line{text-align:center;color:var(--muted);margin-bottom:20px;font-size:.92rem}
+.proof-link{display:inline-block;margin-top:10px;font-size:.8rem;color:var(--cyan);text-decoration:none;border-bottom:1px dotted var(--cyan)}
+.proof-link:hover{color:#fff;border-bottom-color:#fff}
