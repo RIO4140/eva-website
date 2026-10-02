@@ -15,7 +15,7 @@ en: {
   stats: { price:"Price", mcap:"Market Cap", supply:"Total Supply", reserve:"Reserve" },
   about: {
     title:"What is EVA?",
-    p1:"Each purchase funds future sales through a self-funding reserve, so there is no pool for panic to empty.",
+    p1:"Each purchase funds future sales through a self-funding reserve.",
     p2:"EVA also includes an on-chain immune system: it monitors incidents and market pressure and publishes its assessment on-chain — without modifying the core token code. Any response beyond the protocol's pre-authorized bounds requires community governance."
   },
   benefits: {
@@ -108,7 +108,7 @@ ar: {
   stats: { price:"السعر", mcap:"القيمة السوقية", supply:"إجمالي المعروض", reserve:"الاحتياطي" },
   about: {
     title:"ما هي EVA؟",
-    p1:"كل عملية شراء تموّل عمليات البيع اللاحقة عبر احتياطي ذاتي التمويل، فلا يوجد مجمع يمكن للهلع إفراغه.",
+    p1:"كل عملية شراء تموّل عمليات البيع اللاحقة عبر احتياطي ذاتي التمويل.",
     p2:"وتشتمل EVA على نظام مناعة يعمل على البلوكتشين: يرصد الحوادث وضغوط السوق وينشر تقييمه — دون المساس بالشيفرة الأساسية للعملة. وأي استجابة تتجاوز الحدود المعتمدة مسبقًا في البروتوكول تتطلب حوكمة المجتمع."
   },
   benefits: {
