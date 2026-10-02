@@ -7,7 +7,7 @@ en: {
   hero: {
     badge:"DeFi Token on Base",
     title:"EVA",
-    tagline:"A token that protects itself.",
+    tagline:"21 million coins. Not a single admin key.",
     sub:"Priced by a bonding curve on Base — no liquidity pool to drain.",
     ctaBuy:"Buy EVA", ctaLearn:"Learn more",
     price:"Price", perEva:"per EVA"
@@ -15,21 +15,20 @@ en: {
   stats: { price:"Price", mcap:"Market Cap", supply:"Total Supply", reserve:"Reserve" },
   about: {
     title:"What is EVA?",
-    p1:"Each purchase funds future sales through a self-funding reserve.",
-    p2:"EVA also includes an on-chain immune system: it monitors incidents and market pressure and publishes its assessment on-chain — without modifying the core token code. Any response beyond the protocol's pre-authorized bounds requires community governance."
+    p1:"EVA is a digital currency on the Base network with a permanently fixed supply of 21,000,000 — not one coin can ever be added.",
+    p2:"Its price is set by a bonding curve, not a liquidity pool: there is no shared pool to drain, and every purchase funds the reserve that pays future sales. There are no admin keys — any change must pass a public on-chain vote. Around the core, 15 smart contracts are already deployed on Base: soulbound loyalty badges, permissionless automation, a live 12-signal danger score, a multisig treasury, streaming payments, vesting, and more."
   },
   benefits: {
     title:"Why EVA?",
     items:[
-      {t:"No one holds the master key.", d:"There are no admin keys. The only way to change anything is a public on-chain vote."},
-      {t:"There is nothing to drain.", d:"Price comes from a bonding curve, not a shared pool. No vault, no target."},
-      {t:"Every buyer funds the sellers of tomorrow.", d:"Purchases flow into a reserve that pays future sales. The protocol feeds itself."},
-      {t:"It buys its own dips.", d:"Trading taxes automatically buy back and burn EVA once activity thresholds are met."},
-      {t:"Patience is recognized.", d:"Lock EVA and your conviction is measured in tiers — up to 4× weight for the longest locks."},
-      {t:"It watches itself.", d:"An on-chain immune system monitors incidents and market pressure around the clock, and publishes its assessment for everyone to see."},
-      {t:"Loyalty you cannot sell.", d:"Soulbound badges grow with your balance and holding time — standing that can't be bought or transferred, only earned."},
-      {t:"Twelve signals, one verdict.", d:"A live danger score fuses a dozen market and incident indicators into a single on-chain reading — from calm to critical."},
-      {t:"Clockwork without a keeper.", d:"Permissionless automation for the protocol's recurring tasks — no operator, no permission required."}
+      {t:"Fixed supply: 21,000,000.", d:"The number can never change. Scarcity is written into the contract, not promised in a roadmap."},
+      {t:"Zero admin keys.", d:"No master switch exists. Nobody can freeze, mint, or drain anything — every change requires a public on-chain vote."},
+      {t:"Price is a math formula.", d:"A bonding curve sets the price — not market makers, not sentiment. Every trade executes at its own curve price."},
+      {t:"15 contracts deployed on Base.", d:"A working ecosystem around the core: loyalty badges, automation, risk monitoring, multisig treasury, streaming payments, vesting, subscriptions, and a token factory."},
+      {t:"Loyalty that can't be bought.", d:"Soulbound badges grow with your balance and holding time — on-chain standing that can't be transferred, only earned."},
+      {t:"Automatic buy-and-burn.", d:"1% on buys and 1.5% on sells flow into buybacks and burns once activity thresholds are met — the supply only shrinks."},
+      {t:"Every purchase strengthens the next sale.", d:"Buyers fund a dedicated reserve that pays future sellers. The deeper the reserve, the stronger every exit."},
+      {t:"A live danger reading.", d:"Twelve market and incident signals fuse into a single on-chain score — from calm to critical — published for everyone to see."}
     ]
   },
   problems: {
@@ -104,7 +103,7 @@ ar: {
   hero: {
     badge:"عملة رقمية على شبكة Base",
     title:"EVA",
-    tagline:"عملة تحمي نفسها.",
+    tagline:"21 مليون عملة. ولا مفتاح تحكم واحد.",
     sub:"عملة يُحتسب سعرها وفق المنحنى الرياضي على شبكة Base — بلا مجمع سيولة يمكن استنزافه.",
     ctaBuy:"شراء EVA", ctaLearn:"اعرف المزيد",
     price:"السعر", perEva:"لكل EVA"
@@ -112,21 +111,20 @@ ar: {
   stats: { price:"السعر", mcap:"القيمة السوقية", supply:"إجمالي المعروض", reserve:"الاحتياطي" },
   about: {
     title:"ما هي EVA؟",
-    p1:"كل عملية شراء تموّل عمليات البيع اللاحقة عبر احتياطي ذاتي التمويل.",
-    p2:"وتشتمل EVA على نظام مناعة يعمل على البلوكتشين: يرصد الحوادث وضغوط السوق وينشر تقييمه — دون المساس بالشيفرة الأساسية للعملة. وأي استجابة تتجاوز الحدود المعتمدة مسبقًا في البروتوكول تتطلب حوكمة المجتمع."
+    p1:"EVA عملة رقمية على شبكة Base بإجمالي معروض ثابت نهائيًا: 21,000,000 عملة — لا يمكن إضافة عملة واحدة أبدًا.",
+    p2:"يُحدَّد سعرها عبر منحنى رياضي لا عبر مجمع سيولة: لا يوجد مجمع مشترك يمكن استنزافه، وكل عملية شراء تموّل الاحتياطي الذي يدفع المبيعات اللاحقة. ولا توجد مفاتيح تحكم — أي تغيير يجب أن يعبر تصويتًا علنيًا على البلوكتشين. وحول النواة، تم نشر 15 عقدًا ذكيًا على Base: شارات ولاء ملازمة للروح، وأتمتة بلا إذن، ودرجة خطر حيّة من 12 إشارة، وخزانة متعددة التوقيعات، ومدفوعات متدفقة، واستحقاقات، وغيرها."
   },
   benefits: {
     title:"لماذا EVA؟",
     items:[
-      {t:"لا يملك أحد المفتاح الرئيسي.", d:"لا توجد مفاتيح تحكم؛ السبيل الوحيد لأي تغيير تصويتٌ علني على البلوكتشين."},
-      {t:"لا يوجد ما يُستنزَف.", d:"السعر من المنحنى الرياضي لا من مجمع مشترك — بلا خزنة، بلا هدف."},
-      {t:"كل مشترٍ يموّل بائعي الغد.", d:"تتدفق المشتريات إلى احتياطي يدفع المبيعات اللاحقة — البروتوكول يُطعِم نفسه."},
-      {t:"تشتري انخفاضاتها بنفسها.", d:"ضرائب التداول تشتري EVA وتحرقها تلقائيًا عند تحقق عتبات النشاط."},
-      {t:"الصبر يُقدَّر.", d:"جمّد عملاتك وسيُقاس ولاؤك بدرجات — حتى 4 أضعاف لأطول فترات التجميد."},
-      {t:"تراقب نفسها.", d:"نظام مناعة على البلوكتشين يرصد الحوادث وضغوط السوق على مدار الساعة، وينشر تقييمه ليراه الجميع."},
-      {t:"ولاءٌ لا يُباع.", d:"شارات ملازمة للروح تنمو مع رصيدك ومدة احتفاظك — مكانة لا تُشترى ولا تُنقَل، بل تُستحَق."},
-      {t:"اثنتا عشرة إشارة وحكمٌ واحد.", d:"درجة خطر حيّة تدمج عشرات مؤشرات السوق والحوادث في قراءة واحدة على البلوكتشين — من الهدوء إلى الحرج."},
-      {t:"آلية دقيقة بلا قيّم.", d:"أتمتة بلا إذن لمهام البروتوكول الدورية — بلا مشغّل وبلا حاجة إلى إذن."}
+      {t:"معروض ثابت: 21,000,000.", d:"الرقم لا يتغير أبدًا — الندرة مكتوبة في العقد لا موعودة في خارطة طريق."},
+      {t:"صفر مفاتيح تحكم.", d:"لا يوجد زر رئيسي — لا أحد يستطيع تجميد شيء أو سكّ عملات أو سحب أموال؛ كل تغيير يتطلب تصويتًا علنيًا."},
+      {t:"السعر معادلة رياضية.", d:"المنحنى الرياضي يحدد السعر — لا صناع سوق ولا معنويات؛ كل صفقة تُنفَّذ بسعرها الخاص على المنحنى."},
+      {t:"15 عقدًا منشورًا على Base.", d:"منظومة عاملة حول النواة: شارات ولاء، وأتمتة، ومراقبة مخاطر، وخزانة متعددة التوقيعات، ومدفوعات متدفقة، واستحقاقات، واشتراكات، ومصنع عملات."},
+      {t:"ولاءٌ لا يُشترى.", d:"شارات ملازمة للروح تنمو مع الرصيد ومدة الاحتفاظ — مكانة على البلوكتشين لا تُنقَل، بل تُستحَق."},
+      {t:"شراء وحرق تلقائي.", d:"1% على الشراء و1.5% على البيع تتدفق إلى إعادة الشراء والحرق عند تحقق عتبات النشاط — المعروض يتناقص فقط."},
+      {t:"كل شراء يقوّي البيع التالي.", d:"يموّل المشترون احتياطيًا مخصصًا يدفع البائعين اللاحقين — كلما عمُق الاحتياطي قويت كل عملية خروج."},
+      {t:"قراءة خطر حيّة.", d:"تندمج 12 إشارة سوق وحوادث في درجة واحدة على البلوكتشين — من الهدوء إلى الحرج — منشورة للجميع."}
     ]
   },
   problems: {
