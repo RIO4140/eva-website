@@ -7,7 +7,7 @@ en: {
   hero: {
     badge:"DeFi Token on Base",
     title:"EVA",
-    tagline:"A token with an immune system.",
+    tagline:"A token that protects itself.",
     sub:"Priced by a bonding curve on Base — no liquidity pool to drain.",
     ctaBuy:"Buy EVA", ctaLearn:"Learn more",
     price:"Price", perEva:"per EVA"
@@ -104,7 +104,7 @@ ar: {
   hero: {
     badge:"عملة رقمية على شبكة Base",
     title:"EVA",
-    tagline:"عملة بجهاز مناعة.",
+    tagline:"عملة تحمي نفسها.",
     sub:"عملة يُحتسب سعرها وفق المنحنى الرياضي على شبكة Base — بلا مجمع سيولة يمكن استنزافه.",
     ctaBuy:"شراء EVA", ctaLearn:"اعرف المزيد",
     price:"السعر", perEva:"لكل EVA"
